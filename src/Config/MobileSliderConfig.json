@@ -1,0 +1,25 @@
+{
+  "CommonMobileMenu": [
+    {
+      "id": 1,
+      "linkText": "Key Management",
+      "hasChild": true,
+      "hypherLink": "/property",
+      "icon": "home",
+      "child": [
+        {
+          "id": 1,
+          "linkText": "Register Organisation",
+          "hypherLink": "/admin/register-organization",
+          "Icon": "User"
+        },
+        {
+          "id": 2,
+          "linkText": "Analytics",
+          "hypherLink": "/admin/analytics",
+          "Icon": "Search"
+        }
+      ]
+    }
+  ]
+}

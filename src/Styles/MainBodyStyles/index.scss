@@ -1,0 +1,13 @@
+.main-body-container {
+    height: calc(100vh - 108px);
+    display: grid;
+    grid-template-columns: 300px calc(100% - 300px);
+    @import "../SidebarStyles";
+    @import "../BodyStyles";
+}
+@media (max-width: 992px) {
+    .main-body-container {
+        height: calc(100vh - 75px);
+        grid-template-columns: 100% !important;
+    }
+}

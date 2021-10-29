@@ -1,0 +1,208 @@
+.FJCCAIC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FJCBAIC {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.FJCSAIC {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.FJCEAIC {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.FAIC {
+    display: flex;
+    align-items: center;
+}
+.FAIS {
+    display: flex;
+    align-items: flex-start;
+}
+.FAIE {
+    display: flex;
+    align-items: flex-end;
+}
+.FJCE {
+    display: flex;
+    justify-content: flex-end;
+}
+.FJCB {
+    display: flex;
+    justify-content: space-between;
+}
+.FJCC {
+    display: flex;
+    justify-content: center;
+}
+.FJCS {
+    display: flex;
+    justify-content: start;
+}
+.FDC {
+    flex-direction: column;
+}
+.FDR {
+    flex-direction: row;
+}
+.TEXTDOT {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.CUP {
+    cursor: pointer;
+}
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+.mt-15 {
+    margin-top: 15px !important;
+}
+.mr-15 {
+    margin-right: 15px !important;
+}
+.ml-15 {
+    margin-left: 15px !important;
+}
+.py-50 {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+
+.com-select {
+    width: 250px;
+    height: 50px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: #6e6e6e;
+    border: 1px solid #e5e1dc;
+    background-color: #fff;
+    letter-spacing: 0.1px;
+    font-size: 14px;
+}
+.com-button {
+    padding: 6px 22px 8px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    background-color: #f1880e;
+    font-size: 14px;
+    font-weight: bold;
+}
+.tabel-container {
+    min-width: 100%;
+    width: 100%;
+    position: relative;
+    overflow-y: auto;
+    padding: 0 15px;
+}
+
+.com-table {
+    width: 100%;
+    min-width: max-content;
+    font-size: 14px;
+    margin-top: 30px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    padding: 0 10px;
+    thead {
+        background: none;
+        th {
+            font-weight: normal;
+            td {
+                padding: 0 30px;
+            }
+        }
+    }
+    tr {
+        box-shadow: 0px 0px 14px 6px rgba(0, 0, 0, 0.12);
+        -webkit-box-shadow: 0px 0px 14px 6px rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0px 0px 14px 6px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        td {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+    }
+    td {
+        padding: 15px 30px;
+    }
+}
+
+.css-b62m3t-container {
+    width: 250px;
+    display: inline-block;
+    .select__indicator-separator {
+        display: none;
+    }
+    .select__control {
+        border-radius: 8px;
+        height: 50px;
+    }
+}
+
+.overlay-loading {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 9999;
+    background-color: rgba(96, 125, 139, 0.5);
+}
+.overlay-loading > div {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.spin-load,
+.spin-load:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.spin-load {
+    margin: 0px auto;
+    font-size: 4px;
+    border-top: 0.9em solid #ffffff;
+    border-right: 0.9em solid #ffffff;
+    border-bottom: 0.9em solid #ffffff;
+    border-left: 0.9em solid transparent;
+    -webkit-animation: load8 1s infinite linear;
+    animation: load8 1s infinite linear;
+    left: 44% !important;
+    top: 45% !important;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

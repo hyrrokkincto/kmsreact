@@ -1,0 +1,53 @@
+{
+  "message": "Success",
+  "data": {
+    "data": [
+      {
+        "name": "Org1",
+        "id": 1,
+        "email": "org@yopmail.com",
+        "isActive": true,
+        "slug": "7ce74534-bee6-4ae5-b3d5-89sd0p4m",
+        "address": {
+          "line_1": "",
+          "line_2": "",
+          "city": "",
+          "state": "",
+          "postal_code": "",
+          "country": ""
+        },
+        "organizationType": "",
+        "keyExpirationPeriod": 100,
+        "keyRotationPeriod": 0,
+        "lastKeyRotationDate": "2021-10-22T06:55:03.284Z",
+        "createdAt": "2021-10-22T06:55:03.303Z",
+        "updatedAt": "2021-10-22T06:55:03.303Z",
+        "logo": null,
+        "updated_by": null
+      },
+      {
+        "name": "Org2",
+        "id": 2,
+        "email": "org@yopmail.com",
+        "isActive": true,
+        "slug": "7ce74534-bee6-4ae5-b3d5-89sd0p4m",
+        "address": {
+          "line_1": "",
+          "line_2": "",
+          "city": "",
+          "state": "",
+          "postal_code": "",
+          "country": ""
+        },
+        "organizationType": "",
+        "keyExpirationPeriod": 600,
+        "keyRotationPeriod": 0,
+        "lastKeyRotationDate": "2021-10-22T06:55:03.284Z",
+        "createdAt": "2021-10-22T06:55:03.303Z",
+        "updatedAt": "2021-10-22T06:55:03.303Z",
+        "logo": null,
+        "updated_by": null
+      }
+    ]
+  }
+}
