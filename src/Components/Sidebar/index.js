@@ -57,7 +57,7 @@ const Sidebar = (props) => {
                                                 {
                                                     !!CurrentOpenedIndex && CurrentOpenedIndex === id && !!child && child.length > 0 ? child.map((childItem) => {
                                                         let { linkText = '', hypherLink = '', Icon = false } = childItem;
-                                                        return <NavLink key={Math.random() * (idx * idx)} className='menu-item sub-menu' to={`${url}${hypherLink}`}>
+                                                        return <NavLink key={Math.random() * (idx * idx)} className='menu-item sub-menu' exact to={`${url}${hypherLink}`}>
                                                             {!!Icon ? GetIcon(Icon) : <></>}
                                                             {linkText}
                                                         </NavLink>

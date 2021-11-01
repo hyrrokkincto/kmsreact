@@ -29,7 +29,7 @@
         "name": "Org2",
         "id": 2,
         "email": "org@yopmail.com",
-        "isActive": true,
+        "isActive": false,
         "slug": "7ce74534-bee6-4ae5-b3d5-89sd0p4m",
         "address": {
           "line_1": "",
