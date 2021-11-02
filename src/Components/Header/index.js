@@ -18,6 +18,12 @@ const Header = () => {
         }
     };
 
+    const HandleDropdownBlur = (e) => {
+        setTimeout(() => {
+            !!IsProfileDropdown && setIsProfileDropdown(false)
+        }, 500);
+    };
+
     return (
         <>
             <header className='header-container'>
@@ -34,7 +40,7 @@ const Header = () => {
                         <div className='col-6 col-md-4'>
                             <div className='header-profile-container'>
                                 <Feather.Bell />
-                                <div className='name-container' onClick={(event) => handleDropdownClick(event)}>
+                                <div className='name-container' onClick={(event) => handleDropdownClick(event)} tabIndex={1} onBlur={(event) => HandleDropdownBlur(event)}>
                                     <img src={process.env.PUBLIC_URL + profile_image} />
                                     <h6>{name}</h6 >
                                     <Feather.ChevronDown />

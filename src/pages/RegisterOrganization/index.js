@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import * as Feather from 'react-feather'
-import HeadingComponent from '../../Components/HeadingComponent'
+import HeadingComponent from '../../components/HeadingComponent'
 import RegOrgConfigData from '../../Config/NewRegOrgConfig.json';
 import Select from 'react-select';
 import moment from 'moment';
 import { postData } from '../../api';
 import urls from '../../api/urls';
-import CommonLoader from '../../Components/CommonLoader';
+import CommonLoader from '../../components/CommonLoader';
 
 const RegisterOrganization = () => {
 
@@ -28,7 +28,7 @@ const RegisterOrganization = () => {
 
     const HandleFilterInputChange = ({ target = {} }) => {
         let { name = '', value = '' } = target;
-        switch ('SelectedDays') {
+        switch (name) {
             case 'SelectedDays':
                 setSelectedFilterDay(value)
                 setSelectedDayCount(value);
@@ -106,11 +106,7 @@ const RegisterOrganization = () => {
     }
 
     const HandleCustomButtonChange = ({ target = {} }) => {
-        let { value } = target
-        // if (!value) {
-        //     setSelectedFilterDay('No Expiry')
-        //     setSelectedDayCount(0);
-        // } else 
+        let { value } = target;
         if (value == 30) {
             setSelectedDayCount(30);
             setSelectedFilterDay('30')
@@ -126,7 +122,11 @@ const RegisterOrganization = () => {
         }
     }
 
-    console.log('111->SelectedFilterDay->', SelectedFilterDay);
+    const HandleDropdownBlur = (e) => {
+        setTimeout(() => {
+            !!IsOpenFilterDropdown && setIsOpenFilterDropdown(false)
+        }, 500);
+    };
 
     return (
         <>
@@ -135,7 +135,7 @@ const RegisterOrganization = () => {
             <div className='body-usable-container'>
                 <div className='row'>
                     <div className='col-12 col-xl-6'>
-                        <Select
+                        {/* <Select
                             value={SelectedOrganization}
                             onChange={(e) => HandleOrgChange(e, 'SelectedOrganization')}
                             name="SelectedOrganization"
@@ -143,13 +143,13 @@ const RegisterOrganization = () => {
                             style={{ width: '25px' }}
                             placeholder='Select Organization'
                             classNamePrefix="select"
-                        />
-                        <button className='com-button ms-3' onClick={() => HandleGo()}>Go</button>
+                        /> */}
+                        <input className='form-controls' placeholder='Enter Organization' />
                     </div>
                     <div className='col-12 col-xl-6 FJCEAIC mt-4 mt-xl-0 aside-select'>
                         <div className='FAIC'>
                             <span className='small d-none d-sm-block'>Key expiration ( in days )</span>
-                            <div className='search-wrapper' onClick={() => HandleFilterDropDownClick()}>
+                            <div className='search-wrapper' onClick={() => HandleFilterDropDownClick()} tabIndex={1} onBlur={(event) => HandleDropdownBlur(event)}>
                                 <div className='input-value'>
                                     {/* {!!SelectedDayCount ? SelectedDayCount : 'No Expiry'} Days */}
                                     {!!SelectedDayCount ? SelectedDayCount : '0 - '} Days
@@ -175,15 +175,11 @@ const RegisterOrganization = () => {
                 <div className='tabel-container'>
                     <table className='com-table'>
                         <thead>
-                            <th>
+                            <tr>
                                 <td>Organization</td>
-                            </th>
-                            <th>
                                 <td>Key Expiry Period</td>
-                            </th>
-                            <th>
                                 <td>Key Expiry Date</td>
-                            </th>
+                            </tr>
                         </thead>
                         <tbody>
                             {

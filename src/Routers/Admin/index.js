@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Redirect, withRouter } from "react-router";
-import Header from '../../Components/Header';
-import Sidebar from '../../Components/Sidebar';
+import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
 
-const RegisterOrganization = React.lazy(() => import("../../Screens/RegisterOrganization"));
-const Analytics = React.lazy(() => import("../../Screens/Analytics"));
+const RegisterOrganization = React.lazy(() => import("../../pages/RegisterOrganization"));
+const Analytics = React.lazy(() => import("../../pages/Analytics"));
 
 const AdminRoute = () => {
 
