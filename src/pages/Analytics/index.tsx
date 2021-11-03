@@ -1,31 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment';
 import * as Feather from 'react-feather'
-import HeadingComponent from '../../components/HeadingComponent'
+import HeadingComponent from '../../Components/HeadingComponent'
 import AnalyticsConfigData from '../../Config/NewAnalyticsConfig.json';
 import RegOrgConfigData from '../../Config/NewRegOrgConfig.json';
 import Select from 'react-select';
 import { postData } from '../../api';
 import urls from '../../api/urls';
-import CommonLoader from '../../components/CommonLoader';
+import CommonLoader from '../../Components/CommonLoader';
 import ReactPaginate from 'react-paginate';
 
 const Analytics = () => {
 
     const [Loader, setLoader] = useState(false);
-    const [OrgList, setOrgList] = useState([]);
+    const [OrgList, setOrgList] = useState([] as any);
     const [IsFilterDropdownOpen, setIsFilterDropdownOpen] = useState(false);
     const [FilterState, setFilterState] = useState({ userId: '', deviceId: '', keyState: '', KeyExpiryDate: '' })
 
     useEffect(() => {
-        let Temp = [{ value: '', label: 'Select Organization' }]
+        const Temp: any = [{ value: '', label: 'Select Organization' }]
         if (!!RegOrgConfigData.data.data && RegOrgConfigData.data.data.length) {
             RegOrgConfigData.data.data.map(result => { Temp.push({ value: result.id, label: result.name }) })
         }
         setOrgList([...Temp])
     }, []);
 
-    const handleDropdownClick = (event) => {
+    const handleDropdownClick = (event: any) => {
         if (!IsFilterDropdownOpen) return setIsFilterDropdownOpen(true)
         else return setIsFilterDropdownOpen(!true)
     };
@@ -50,7 +50,7 @@ const Analytics = () => {
         setTimeout(() => setLoader(!true), 2000);
     }
 
-    const HandleDropdownBlur = (event) => {
+    const HandleDropdownBlur = (event: any) => {
         if (!event.currentTarget.contains(event.relatedTarget)) {
             setTimeout(() => {
                 !!IsFilterDropdownOpen && setIsFilterDropdownOpen(false)
@@ -58,7 +58,7 @@ const Analytics = () => {
         }
     };
 
-    const HandleOnChangeFilter = (event) => {
+    const HandleOnChangeFilter = (event: any) => {
         event.stopPropagation()
         let { target } = event;
         setFilterState(prev => ({ ...prev, [target.name]: target.value }))
@@ -170,7 +170,7 @@ const Analytics = () => {
                         disabledClassName={'disable-page'}
                         // onPageChange={HandlePageClick}
                         containerClassName={"pagination"}
-                        subContainerClassName={"pages pagination"}
+                        // subContainerClassName={`pages pagination`}
                         activeClassName={"active"}
                     />
                 </div>

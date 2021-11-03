@@ -3,18 +3,18 @@ import * as Feather from 'react-feather';
 import { withRouter, NavLink } from 'react-router-dom';
 import { CommonMobileMenu } from '../../Config/MobileSliderConfig.json';
 
-const Sidebar = (props) => {
+const Sidebar = (props:any) => {
 
     const [SidebarToogle, setSidebarToogle] = useState(false);
 
     const [CurrentOpenedIndex, setCurrentOpenedIndex] = useState(null);
-    const CurrentOpenIndex = id => {
+    const CurrentOpenIndex = (id: any) => {
         if (!id) return;
         if (id === CurrentOpenedIndex) setCurrentOpenedIndex(null);
         else setCurrentOpenedIndex(id);
     }
 
-    const GetIcon = (name) => {
+    const GetIcon = (name: any) => {
         switch (name) {
             case 'User': return <Feather.User className='me-2' />;
             case 'Search': return <Feather.Search className='me-2' />;
