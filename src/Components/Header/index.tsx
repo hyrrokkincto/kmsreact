@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import * as Feather from 'react-feather';
 import { Link } from 'react-router-dom';
-import HeaderConfig from '../../Config/HeaderConfig.json';
+import HeaderConfigJSON from '../../Config/HeaderConfig.json';
 
 const Header = () => {
 
     const [IsProfileDropdown, setIsProfileDropdown] = useState(false);
-
+    const HeaderConfig: any = HeaderConfigJSON;
     let { data = {} } = !!HeaderConfig ? HeaderConfig : {};
-    let { name = '', profile_image = '' } = !!data ? data : {};
+    let { name= '', profile_image = '' } = !!data ? data : {};
 
-    const handleDropdownClick = (event) => {
+    const handleDropdownClick = (event: any) => {
         if (!IsProfileDropdown) {
             setIsProfileDropdown(true)
         } else {
@@ -18,7 +18,7 @@ const Header = () => {
         }
     };
 
-    const HandleDropdownBlur = (e) => {
+    const HandleDropdownBlur = (e:any) => {
         setTimeout(() => {
             !!IsProfileDropdown && setIsProfileDropdown(false)
         }, 500);
