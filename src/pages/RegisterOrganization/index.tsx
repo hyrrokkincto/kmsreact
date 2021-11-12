@@ -142,7 +142,7 @@ const RegisterOrganization = () => {
       <CommonLoader Load={Loader} />
       <HeadingComponent name="Register Organisation" />
       <div className="body-usable-container">
-        <div className="row">
+        <div className="row mb-4">
           <div className="col-12 col-xl-6">
             {/* <Select
                             value={SelectedOrganization}
@@ -270,7 +270,7 @@ const RegisterOrganization = () => {
                 RegOrgConfigData.data.data.map((result) => {
                   return (
                     <>
-                      {!!result && result.isActive ? (
+                      {!!result && !result.isActive ? (
                         <tr>
                           <td>{result.name}</td>
                           <td>{result.keyExpirationPeriod}</td>
