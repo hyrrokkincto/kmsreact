@@ -1,0 +1,23 @@
+[
+  {
+    "groupName": "group1",
+    "settingsName": "Buzz Settings Name",
+    "groupSlug": "group-one",
+    "orgSlug": "parentOrgSlug",
+    "profileImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg"
+  },
+  {
+    "groupName": "group2",
+    "settingsName": "Buzz Settings Name",
+    "groupSlug": "group-two",
+    "orgSlug": "parentOrgSlug",
+    "profileImage": "https://cdn.wallpapersafari.com/83/57/hQBZk8.jpg"
+  },
+  {
+    "groupName": "group4",
+    "settingsName": "Buzz Settings Name",
+    "groupSlug": "group-three",
+    "orgSlug": "parentOrgSlug",
+    "profileImage": "https://www.publicdomainpictures.net/pictures/30000/velka/solid-orange-background.jpg"
+  }
+]

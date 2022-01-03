@@ -234,42 +234,42 @@ code {
     min-width: 250px;
 }
 .form-controls:focus-visible,
-.pagination {
+.pagination-styles {
     outline: none;
 }
-.pagination {
+.pagination-styles {
     padding: 30px 0;
     display: flex;
     justify-content: center;
     list-style: none;
 }
-.pagination li {
+.pagination-styles li {
     margin: 0 5px;
 }
-.pagination > li > a {
+.pagination-styles > li > a {
     border: 1px solid #6e6e73;
     padding: 5px 10px;
     outline: none;
     cursor: pointer;
     border-radius: 5px;
 }
-.pagination > .active > a,
-.pagination > .active > a:focus,
-.pagination > .active > a:hover,
-.pagination > .active > span,
-.pagination > .active > span:focus,
-.pagination > .active > span:hover {
+.pagination-styles > .active > a,
+.pagination-styles > .active > a:focus,
+.pagination-styles > .active > a:hover,
+.pagination-styles > .active > span,
+.pagination-styles > .active > span:focus,
+.pagination-styles > .active > span:hover {
     background-color: #6e6e73;
     border-color: #6e6e73;
     outline: none;
 }
-.pagination > .active > a {
+.pagination-styles > .active > a {
     background-color: #6e6e73;
     border-color: #6e6e73;
     color: #fff;
 }
-.pagination > li > a,
-.pagination > li > span {
+.pagination-styles > li > a,
+.pagination-styles > li > span {
     color: #6e6e73;
 }
 .disable-page > a {
@@ -474,7 +474,8 @@ code {
     -moz-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
 }
 .main-body-container .body-container {
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow: auto;
     background-color: #f5f5f5;
 }
 .search-wrapper {
