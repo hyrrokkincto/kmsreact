@@ -221,41 +221,41 @@
         outline: none;
     }
 }
-.pagination-styles {
+.pagination {
     padding: 30px 0;
     display: flex;
     justify-content: center;
     list-style: none;
     outline: none;
 }
-.pagination-styles li {
+.pagination li {
     margin: 0px 5px;
 }
-.pagination-styles > li > a {
+.pagination > li > a {
     border: 1px solid #6e6e73;
     padding: 5px 10px;
     outline: none;
     cursor: pointer;
     border-radius: 5px;
 }
-.pagination-styles > .active > a,
-.pagination-styles > .active > span,
-.pagination-styles > .active > a:hover,
-.pagination-styles > .active > span:hover,
-.pagination-styles > .active > a:focus,
-.pagination-styles > .active > span:focus {
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
     background-color: #6e6e73;
     border-color: #6e6e73;
     outline: none;
 }
 
-.pagination-styles > .active > a {
+.pagination > .active > a {
     background-color: #6e6e73;
     border-color: #6e6e73;
     color: #fff;
 }
-.pagination-styles > li > a,
-.pagination-styles > li > span {
+.pagination > li > a,
+.pagination > li > span {
     color: #6e6e73;
 }
 .disable-page > a {
