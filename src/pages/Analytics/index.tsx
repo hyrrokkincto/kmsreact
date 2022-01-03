@@ -245,7 +245,7 @@ const Analytics = () => {
             pageRangeDisplayed={2}
             disabledClassName={"disable-page"}
             // onPageChange={HandlePageClick}
-            containerClassName={"pagination"}
+            containerClassName={"pagination-styles"}
             // subContainerClassName={`pages pagination`}
             activeClassName={"active"}
           />

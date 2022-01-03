@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="179" height="179" viewBox="0 0 179 179">
+  <g id="Group_93" data-name="Group 93" transform="translate(-863 -368)">
+    <circle id="Ellipse_15" data-name="Ellipse 15" cx="89.5" cy="89.5" r="89.5" transform="translate(863 368)" fill="#f3f2f2"/>
+    <g id="Group_86" data-name="Group 86" transform="translate(21.168 26.243)">
+      <path id="ic_drafts_24px" d="M43.749,15.619a4.14,4.14,0,0,0-1.963-3.55L22.885,1,3.984,12.069A4.158,4.158,0,0,0,2,15.619V36.5a4.189,4.189,0,0,0,4.177,4.177H39.593A4.189,4.189,0,0,0,43.77,36.5ZM22.885,26.062,5.634,15.285,22.885,5.177,40.136,15.285Z" transform="translate(909.447 412.833)" fill="#f1880e"/>
+      <g id="Rectangle_175" data-name="Rectangle 175" transform="translate(918.342 409)" fill="#fff" stroke="#f1880e" stroke-width="3">
+        <rect width="28.489" height="32.559" stroke="none"/>
+        <rect x="1.5" y="1.5" width="25.489" height="29.559" fill="none"/>
+      </g>
+      <path id="Path_46" data-name="Path 46" d="M10894.825-1370.406l17.388,10.765,17.357-10.765v17.8l-28.2-1.139-7.262-10.395Z" transform="translate(-9979.783 1798.531)" fill="#f1880e"/>
+      <rect id="Rectangle_176" data-name="Rectangle 176" width="13.736" height="3.052" rx="1.526" transform="translate(922.412 421.718)" fill="#f1880e"/>
+      <rect id="Rectangle_177" data-name="Rectangle 177" width="9.666" height="3.052" rx="1.526" transform="translate(922.412 417.648)" fill="#f1880e"/>
+    </g>
+    <path id="ic_smartphone_24px" d="M69.262,1.054,15.71,1A10.742,10.742,0,0,0,5,11.71V108.1a10.742,10.742,0,0,0,10.71,10.71H69.262a10.742,10.742,0,0,0,10.71-10.71V11.71A10.7,10.7,0,0,0,69.262,1.054ZM71.895,109.82H13.114V9.485l58.78.861Z" transform="translate(910.014 397.593)" fill="#f1880e"/>
+  </g>
+</svg>

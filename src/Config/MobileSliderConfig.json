@@ -5,7 +5,7 @@
       "linkText": "Key Management",
       "hasChild": true,
       "hypherLink": "/property",
-      "icon": "home",
+      "icon": "key",
       "child": [
         {
           "id": 1,
@@ -20,6 +20,34 @@
           "Icon": "Search"
         }
       ]
+    },
+    {
+      "id": 3,
+      "linkText": "Administrator",
+      "hasChild": true,
+      "hypherLink": "/property",
+      "icon": "settings",
+      "child": [
+        {
+          "id": 4,
+          "linkText": "Audit",
+          "hypherLink": "/admin/audit",
+          "Icon": "file-check"
+        },
+        {
+          "id": 5,
+          "linkText": "Roles",
+          "hypherLink": "/admin/roles",
+          "Icon": "users"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "linkText": "Group",
+      "hasChild": false,
+      "hypherLink": "/admin/group",
+      "icon": "server"
     }
   ]
 }

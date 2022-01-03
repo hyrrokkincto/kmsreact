@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.002" height="21.191" viewBox="0 0 20.002 21.191">
+  <g id="Group_210" data-name="Group 210" transform="translate(-1281.16 -980.435)">
+    <path id="ic_note_24px" d="M12.874,3.862,9.012,0H1.287A1.291,1.291,0,0,0,0,1.287V9.018A1.286,1.286,0,0,0,1.287,10.3l10.3-.006a1.286,1.286,0,0,0,1.287-1.281ZM8.368.966l3.54,3.54H8.368Z" transform="matrix(-0.017, -1, 1, -0.017, 1281.385, 993.487)" fill="#888"/>
+    <g id="Group_173" data-name="Group 173" transform="translate(1285.386 985.349)">
+      <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 0)" fill="#fff" stroke="#888" stroke-width="2">
+        <ellipse cx="6.621" cy="6.621" rx="6.621" ry="6.621" stroke="none"/>
+        <ellipse cx="6.621" cy="6.621" rx="5.621" ry="5.621" fill="none"/>
+      </g>
+      <g id="Rectangle_21" data-name="Rectangle 21" transform="translate(9.462 11.005) rotate(-43)" fill="#fff" stroke="#888" stroke-width="1">
+        <rect width="1.911" height="7.209" rx="0.956" stroke="none"/>
+        <rect x="0.5" y="0.5" width="0.911" height="6.209" rx="0.456" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

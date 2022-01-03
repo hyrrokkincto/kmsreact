@@ -1,0 +1,56 @@
+[
+  {
+    "id": "Administrator",
+    "name": "Administrator",
+    "role_for": "string",
+    "organization": {
+      "id": "string",
+      "name": "string"
+    }
+  },
+  {
+    "id": "Editor",
+    "name": "Editor",
+    "role_for": "string",
+    "organization": {
+      "id": "string",
+      "name": "string"
+    }
+  },
+  {
+    "id": "Contributor",
+    "name": "Contributor",
+    "role_for": "string",
+    "organization": {
+      "id": "string",
+      "name": "string"
+    }
+  },
+  {
+    "id": "Manager",
+    "name": "Manager",
+    "role_for": "string",
+    "organization": {
+      "id": "string",
+      "name": "string"
+    }
+  },
+  {
+    "id": "Team Leader",
+    "name": "Team Leader",
+    "role_for": "string",
+    "organization": {
+      "id": "string",
+      "name": "string"
+    }
+  },
+  {
+    "id": "Subscriber",
+    "name": "Subscriber",
+    "role_for": "string",
+    "organization": {
+      "id": "string",
+      "name": "string"
+    }
+  }
+]
