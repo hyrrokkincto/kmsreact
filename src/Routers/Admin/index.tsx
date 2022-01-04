@@ -18,7 +18,7 @@ const AdminRoute = () => {
       <Header />
       <div className="main-body-container">
         <Sidebar />
-        <div className="body-container page_content">
+        <div className="body-container page_content p-0">
           <Switch>
             <Route exact path="/admin">
               <Redirect to="/admin/register-organization" />
