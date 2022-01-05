@@ -1,0 +1,57 @@
+.CS {
+    color: $SecondaryColor;
+}
+.FJCCAIC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FJCBAIC {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.FJCSAIC {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.FJCEAIC {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.FAIC {
+    display: flex;
+    align-items: center;
+}
+.FAIS {
+    display: flex;
+    align-items: flex-start;
+}
+.FAIE {
+    display: flex;
+    align-items: flex-end;
+}
+.FJCE {
+    display: flex;
+    justify-content: flex-end;
+}
+.FJCB {
+    display: flex;
+    justify-content: space-between;
+}
+.FJCC {
+    display: flex;
+    justify-content: center;
+}
+.FJCS {
+    display: flex;
+    justify-content: start;
+}
+.FDC {
+    flex-direction: column;
+}
+.FDR {
+    flex-direction: row;
+}
