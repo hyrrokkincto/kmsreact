@@ -226,7 +226,7 @@ const GroupComponent = () => {
                           transform="translate(1737 329)"
                           fill="#f3f3f3"
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                         >
                           <circle
                             cx="28.5"
@@ -304,7 +304,7 @@ const GroupComponent = () => {
                                   ></use>
                                 </svg>
                                 {!!AddUserPopup &&
-                                SelectedGroupItem.groupName ===
+                                  SelectedGroupItem.groupName ===
                                   group.groupName ? (
                                   <div
                                     className="add-user-container"
@@ -364,7 +364,7 @@ const GroupComponent = () => {
                                   ></use>
                                 </svg>
                                 {!!SearchUserPopup &&
-                                SelectedGroupItem.groupName ===
+                                  SelectedGroupItem.groupName ===
                                   group.groupName ? (
                                   <div
                                     className="search-user-container"
@@ -387,7 +387,7 @@ const GroupComponent = () => {
                                     </div>
                                     <div className="user-list-contianer">
                                       {!!SelectedUserList &&
-                                      SelectedUserList.length ? (
+                                        SelectedUserList.length ? (
                                         SelectedUserList.map((user) => {
                                           return (
                                             <div
@@ -427,7 +427,7 @@ const GroupComponent = () => {
                                       type="button"
                                       className="btn btn-theme ms-auto ok-button"
                                     >
-                                      Ok
+                                      Submit Request
                                     </button>
                                   </div>
                                 ) : (
@@ -447,84 +447,88 @@ const GroupComponent = () => {
             </div>
           </div>
         </section>
-        {!!CreateGroupPopup ? (
-          <CommonPopup
-            ModelClassName={"modal_user"}
-            Heading="Create Group Name"
-            OnClose={HandleCloseCreatePopup}
-          >
-            <form className="row mt-4">
-              <div className="col-12">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Group Name"
-                  value={NewGroupName}
-                  name="NewGroupName"
-                  onChange={HandleFormChange}
-                />
-              </div>
-              <div className="col-12 d-flex mt-2">
-                <button
-                  type="button"
-                  className="btn btn-submit"
-                  onClick={HandleCloseCreatePopup}
-                >
-                  Cancel
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-theme ms-3"
-                  onClick={HandleCreateGropup}
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </CommonPopup>
-        ) : (
-          <></>
-        )}
+        {
+          !!CreateGroupPopup ? (
+            <CommonPopup
+              ModelClassName={"modal_user"}
+              Heading="Create Group Name"
+              OnClose={HandleCloseCreatePopup}
+            >
+              <form className="row mt-4">
+                <div className="col-12">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Group Name"
+                    value={NewGroupName}
+                    name="NewGroupName"
+                    onChange={HandleFormChange}
+                  />
+                </div>
+                <div className="col-12 d-flex mt-2">
+                  <button
+                    type="button"
+                    className="btn btn-submit"
+                    onClick={HandleCloseCreatePopup}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-theme ms-3"
+                    onClick={HandleCreateGropup}
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </CommonPopup>
+          ) : (
+            <></>
+          )
+        }
 
-        {!!EditGroupPopup ? (
-          <CommonPopup
-            ModelClassName={"modal_user"}
-            Heading="Edit Group Name"
-            OnClose={HandleCloseEditPopup}
-          >
-            <form className="row mt-4">
-              <div className="col-12">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Group Name"
-                  value={NewGroupName}
-                  name="NewGroupName"
-                  onChange={HandleFormChange}
-                />
-              </div>
-              <div className="col-12 d-flex mt-2">
-                <button
-                  type="button"
-                  className="btn btn-submit"
-                  onClick={HandleCloseEditPopup}
-                >
-                  Cancel
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-theme ms-3"
-                  onClick={HandleEditGropup}
-                >
-                  Update
-                </button>
-              </div>
-            </form>
-          </CommonPopup>
-        ) : (
-          <></>
-        )}
-      </div>
+        {
+          !!EditGroupPopup ? (
+            <CommonPopup
+              ModelClassName={"modal_user"}
+              Heading="Edit Group Name"
+              OnClose={HandleCloseEditPopup}
+            >
+              <form className="row mt-4">
+                <div className="col-12">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Group Name"
+                    value={NewGroupName}
+                    name="NewGroupName"
+                    onChange={HandleFormChange}
+                  />
+                </div>
+                <div className="col-12 d-flex mt-2">
+                  <button
+                    type="button"
+                    className="btn btn-submit"
+                    onClick={HandleCloseEditPopup}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-theme ms-3"
+                    onClick={HandleEditGropup}
+                  >
+                    Update
+                  </button>
+                </div>
+              </form>
+            </CommonPopup>
+          ) : (
+            <></>
+          )
+        }
+      </div >
     </>
   );
 };

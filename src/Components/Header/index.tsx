@@ -8,7 +8,7 @@ const Header = () => {
     const [IsProfileDropdown, setIsProfileDropdown] = useState(false);
     const HeaderConfig: any = HeaderConfigJSON;
     let { data = {} } = !!HeaderConfig ? HeaderConfig : {};
-    let { name= '', profile_image = '' } = !!data ? data : {};
+    let { name = '', profile_image = '' } = !!data ? data : {};
 
     const handleDropdownClick = (event: any) => {
         if (!IsProfileDropdown) {
@@ -18,7 +18,7 @@ const Header = () => {
         }
     };
 
-    const HandleDropdownBlur = (e:any) => {
+    const HandleDropdownBlur = (e: any) => {
         setTimeout(() => {
             !!IsProfileDropdown && setIsProfileDropdown(false)
         }, 500);
@@ -44,7 +44,6 @@ const Header = () => {
                                     <img src={process.env.PUBLIC_URL + profile_image} />
                                     <h6>{name}</h6 >
                                     <Feather.ChevronDown />
-
                                     <div className={`profile-dropdown${!!IsProfileDropdown ? ' d-block' : ' d-none'}`}>
                                         <div>
                                             <div>Profile</div>
@@ -53,7 +52,6 @@ const Header = () => {
                                             <div>Logout</div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

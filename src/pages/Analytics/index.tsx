@@ -109,9 +109,8 @@ const Analytics = () => {
                 onClick={(event) => {
                   event.stopPropagation();
                 }}
-                className={`dropdown-content${
-                  !!IsFilterDropdownOpen ? " d-block" : " d-none"
-                }`}
+                className={`dropdown-content${!!IsFilterDropdownOpen ? " d-block" : " d-none"
+                  }`}
               >
                 <input
                   className="dropdown-input"
@@ -201,7 +200,7 @@ const Analytics = () => {
             </thead>
             <tbody>
               {!!AnalyticsConfigData.data.data &&
-              AnalyticsConfigData.data.data.length ? (
+                AnalyticsConfigData.data.data.length ? (
                 AnalyticsConfigData.data.data.map((result) => {
                   return (
                     <tr>

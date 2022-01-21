@@ -194,7 +194,7 @@ const AuditComponent = () => {
                 pageCount={6}
                 marginPagesDisplayed={2}
                 disableInitialCallback={true}
-                initialPage={1}
+                forcePage={0}
                 pageRangeDisplayed={2}
                 disabledClassName={"disable-page"}
                 // onPageChange={HandlePageClick}

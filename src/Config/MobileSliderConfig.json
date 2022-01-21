@@ -48,6 +48,13 @@
       "hasChild": false,
       "hypherLink": "/admin/group",
       "icon": "server"
+    },
+    {
+      "id": 7,
+      "linkText": "Service Request",
+      "hasChild": false,
+      "hypherLink": "/admin/service-request",
+      "icon": "sliders"
     }
   ]
 }

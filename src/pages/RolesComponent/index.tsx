@@ -181,7 +181,7 @@ const RolesComponent = () => {
                             transform="translate(1737 329)"
                             fill="#f3f3f3"
                             stroke="currentColor"
-                            stroke-width="2"
+                            strokeWidth="2"
                           >
                             <circle
                               cx="28.5"

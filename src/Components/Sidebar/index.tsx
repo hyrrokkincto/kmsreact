@@ -4,6 +4,7 @@ import { withRouter, NavLink } from "react-router-dom";
 import { CommonMobileMenu } from "../../Config/MobileSliderConfig.json";
 
 const Sidebar = (props: any) => {
+
   const [SidebarToogle, setSidebarToogle] = useState(false);
 
   const [CurrentOpenedIndex, setCurrentOpenedIndex] = useState(null);
@@ -15,22 +16,15 @@ const Sidebar = (props: any) => {
 
   const GetIcon = (name: any) => {
     switch (name) {
-      case "User":
-        return <Feather.User className="me-2" />;
-      case "Search":
-        return <Feather.Search className="me-2" />;
-      case "key":
-        return <Feather.Key className="me-2" />;
-      case "settings":
-        return <Feather.Settings className="me-2" />;
-      case "file-check":
-        return <Feather.CheckSquare className="me-2" />;
-      case "users":
-        return <Feather.Users className="me-2" />;
-      case "server":
-        return <Feather.Server className="me-2" />;
-      default:
-        break;
+      case "User": return <Feather.User className="me-2" />;
+      case "Search": return <Feather.Search className="me-2" />;
+      case "key": return <Feather.Key className="me-2" />;
+      case "settings": return <Feather.Settings className="me-2" />;
+      case "file-check": return <Feather.CheckSquare className="me-2" />;
+      case "users": return <Feather.Users className="me-2" />;
+      case "server": return <Feather.Server className="me-2" />;
+      case "sliders": return <Feather.Sliders className="me-2" />;
+      default: break;
     }
   };
 
@@ -65,7 +59,7 @@ const Sidebar = (props: any) => {
                   <>
                     {!hasChild ? (
                       <NavLink
-                        key={Math.random() * idx}
+                        key={JSON.stringify(menu)}
                         className="menu-item"
                         exact
                         to={`${url}${hypherLink}`}
@@ -77,13 +71,12 @@ const Sidebar = (props: any) => {
                       <></>
                     )}
                     {!!hasChild ? (
-                      <div key={idx} className="menu-item-has-child">
+                      <div key={JSON.stringify(menu)} className="menu-item-has-child">
                         <div
-                          className={`menu-item ${
-                            window.location.href.includes(hypherLink)
-                              ? "active"
-                              : ""
-                          }`}
+                          className={`menu-item ${window.location.href.includes(hypherLink)
+                            ? "active"
+                            : ""
+                            }`}
                           onClick={() => CurrentOpenIndex(id)}
                         >
                           <div className="FJCB">
@@ -94,7 +87,7 @@ const Sidebar = (props: any) => {
                             <span>
                               {" "}
                               {!!CurrentOpenedIndex &&
-                              CurrentOpenedIndex === id ? (
+                                CurrentOpenedIndex === id ? (
                                 <Feather.ChevronUp />
                               ) : (
                                 <Feather.ChevronDown />
@@ -103,9 +96,9 @@ const Sidebar = (props: any) => {
                           </div>
                         </div>
                         {!!CurrentOpenedIndex &&
-                        CurrentOpenedIndex === id &&
-                        !!child &&
-                        child.length > 0 ? (
+                          CurrentOpenedIndex === id &&
+                          !!child &&
+                          child.length > 0 ? (
                           child.map((childItem) => {
                             let {
                               linkText = "",
@@ -114,7 +107,7 @@ const Sidebar = (props: any) => {
                             } = childItem;
                             return (
                               <NavLink
-                                key={Math.random() * (idx * idx)}
+                                key={JSON.stringify(childItem)}
                                 className="menu-item sub-menu"
                                 exact
                                 to={`${url}${hypherLink}`}
