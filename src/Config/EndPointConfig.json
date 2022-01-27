@@ -1,0 +1,135 @@
+{
+  "data": [
+    {
+      "slug": "44ef9f5f-72e1-4554-b17a-46f240750ecd",
+      "deviceName": "android89",
+      "licenseKey": "326ca890c82113d9be1e0ad69fea2ef582ecca7b01e186588c3cb1fb8",
+      "osType": "IOS",
+      "user": {
+        "email": "gtest1@yopmail.com"
+      },
+      "deviceInformation": {
+        "slug": "25532f31-bc69-4d18-8f7d-6201774dbe56",
+        "appInfo": [
+          {
+            "display_name": "sarath",
+            "display_version": "string",
+            "install_date": "string",
+            "installlocation": "string",
+            "publisher": "string"
+          }
+        ],
+        "audioInfo": [
+          {
+            "audio_device_id": "string",
+            "audio_manufacturer": "string",
+            "audio_name": "string",
+            "audio_status": "string"
+          }
+        ],
+        "cpuInfo": [
+          {
+            "processor_device_id": "string",
+            "processor_manufacturer": "string",
+            "processor_name": "string",
+            "processor_number_of_cores": "string",
+            "processor_status": "string"
+          }
+        ],
+        "gpuInfo": [
+          {
+            "device_id": "string",
+            "driver_version": "string",
+            "name": "string",
+            "size": "string",
+            "status": "string",
+            "video_processor": "test"
+          }
+        ],
+        "osInfo": {
+          "architecture": "string",
+          "build_Number": "string",
+          "current_time_zone": "string",
+          "install_date": "string",
+          "last_boot_up_time": "string",
+          "manufacturer": "string",
+          "name": "string",
+          "version1": "string"
+        },
+        "ramInfo": [
+          {
+            "capacity": "string",
+            "manufacturer": "string",
+            "name": "string",
+            "serial_number": "string",
+            "status": "string"
+          }
+        ],
+        "mainInfo": {
+          "device_manufacturer": "string",
+          "device_model": "string",
+          "device_name": "string",
+          "device_system_type": "string"
+        }
+      },
+      "deviceVulnerability": {
+        "slug": "78d5d777-cd0a-4df9-8b76-ef131c320b2a",
+        "vulnerabilityInfo": [
+          {
+            "cve": "CVE-2021-34527",
+            "affected_product": "string",
+            "severity": "High",
+            "impact": "string",
+            "base_score": "string",
+            "attack_vector": "string",
+            "attack_complexity": "string",
+            "published_date": "string",
+            "last_modified_date": "string",
+            "patch": "string"
+          },
+          {
+            "cve": "CVE-2021-34527",
+            "affected_product": "string",
+            "severity": "Critical",
+            "impact": "string",
+            "base_score": "string",
+            "attack_vector": "string",
+            "attack_complexity": "string",
+            "published_date": "string",
+            "last_modified_date": "string",
+            "patch": "string"
+          }
+        ],
+        "severity": "Critical"
+      }
+    },
+    {
+      "slug": "d4bb2795-8128-4291-ac81-01ad9bdf9a94",
+      "deviceName": "record",
+      "licenseKey": "testing",
+      "osType": "IOS",
+      "user": {
+        "email": "gtest1@yopmail.com"
+      },
+      "deviceInformation": null,
+      "deviceVulnerability": {
+        "slug": "cb8727eb-cb15-4124-8795-17ecc6797503",
+        "vulnerabilityInfo": [
+          {
+            "cve": "string",
+            "affected_product": "sflnskfjs",
+            "severity": "Critical",
+            "impact": "string",
+            "base_score": "string",
+            "attack_vector": "string",
+            "attack_complexity": "sfksnf",
+            "published_date": "string",
+            "last_modified_date": "string",
+            "patch": "strsfjsfslkfing"
+          }
+        ],
+        "severity": "Critical"
+      }
+    }
+  ]
+}

@@ -55,6 +55,13 @@
       "hasChild": false,
       "hypherLink": "/admin/service-request",
       "icon": "sliders"
+    },
+    {
+      "id": 8,
+      "linkText": "End Points",
+      "hasChild": false,
+      "hypherLink": "/admin/end-points",
+      "icon": "database"
     }
   ]
 }

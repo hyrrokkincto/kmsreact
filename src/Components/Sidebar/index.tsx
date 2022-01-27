@@ -24,6 +24,7 @@ const Sidebar = (props: any) => {
       case "users": return <Feather.Users className="me-2" />;
       case "server": return <Feather.Server className="me-2" />;
       case "sliders": return <Feather.Sliders className="me-2" />;
+      case "database": return <Feather.Database className="me-2" />;
       default: break;
     }
   };
