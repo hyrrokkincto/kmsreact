@@ -53,7 +53,7 @@ const ServiceRequest = () => {
               <div className="col-8">
                 <div className="FAIC mb-4">
                   <div className="w-25">
-                    <h4>Request Form</h4>
+                    <h5>Request Form</h5>
                   </div>
                   <div className="w-75">
                     <div className="request-form-select"
@@ -75,7 +75,7 @@ const ServiceRequest = () => {
                 </div>
                 <div className="d-flex">
                   <div className="w-25">
-                    <h4>Message:</h4>
+                    <h5>Message:</h5>
                   </div>
                   <div className="w-75">
                     <textarea className="req-form-textarea mb-3" value={Message} onChange={(eve) => setMessage(eve.target.value)} rows={8} placeholder="Message Here" />

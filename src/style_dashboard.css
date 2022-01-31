@@ -3437,6 +3437,7 @@ button.btn-theme-dialog {
   border-start-start-radius: 8px;
   border-bottom-left-radius: 8px;
   border: 1px solid #e5e1dc;
+  font-size: 14px;
 }
 .request-form-select button {
   background-color: #f1880e;
@@ -3458,6 +3459,7 @@ textarea.req-form-textarea {
   border: 1px solid #e5e1dc;
   width: 100%;
   resize: none;
+  font-size: 14px;
 }
 .btn-theme-primary {
   min-width: 120px;
@@ -3486,6 +3488,7 @@ textarea.req-form-textarea {
   top: 110%;
   right: 0;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.16);
+  font-size: 14px;
 }
 .request-type-dropdown .type-item {
   padding: 16px;
@@ -3506,10 +3509,12 @@ textarea.req-form-textarea {
 }
 .end-point-container table tr th {
   text-align: center;
+  font-weight: normal;
 }
 .end-point-container table tbody tr {
   border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.16);
 }
 .end-point-container table tbody tr td {
   padding: 1rem;

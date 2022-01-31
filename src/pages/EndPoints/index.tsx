@@ -3,6 +3,7 @@ import { Accordion, Dropdown, DropdownButton } from "react-bootstrap";
 import * as Feather from "react-feather";
 import CommonPopup from "../../Components/CommonPopup";
 import EndPointData from '../../Config/EndPointConfig.json'
+import ReactPaginate from "react-paginate";
 
 const EndPoints = () => {
 
@@ -95,12 +96,12 @@ const EndPoints = () => {
                   return <tr onClick={() => OnSelectData(data)} >
                     <td>
                       <span className="text-uppercase">
-                        <b>{data.deviceName}</b>
+                        {data.deviceName}
                       </span><br />
                       {data.user.email}
                     </td>
                     <td>
-                      <b>{data.osType}</b><br />
+                      {data.osType}<br />
                       Lenovo / Laptop
                     </td>
                     <td className="text-center">{GetStatusElement(data.deviceVulnerability.severity)}</td>
@@ -110,6 +111,23 @@ const EndPoints = () => {
               }
             </tbody>
           </table>
+
+          <ReactPaginate
+            previousLabel={"<"}
+            nextLabel={">"}
+            breakLabel={"..."}
+            breakClassName={"break-me"}
+            pageCount={6}
+            marginPagesDisplayed={2}
+            disableInitialCallback={true}
+            forcePage={0}
+            pageRangeDisplayed={2}
+            disabledClassName={"disable-page"}
+            // onPageChange={HandlePageClick}
+            containerClassName={"pagination-styles"}
+            // subContainerClassName={`pages pagination`}
+            activeClassName={"active"}
+          />
         </div>
       </div>
       {
@@ -202,10 +220,6 @@ const EndPoints = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="modal-content mt-3">
-                <div className="modal-body">
                   <Accordion defaultActiveKey={'0'}>
                     <Accordion.Item eventKey="0">
                       <Accordion.Header><span style={{ fontSize: '12px' }} className="text-dark">VULNERABILITIES</span></Accordion.Header>
@@ -221,7 +235,7 @@ const EndPoints = () => {
                           {
                             !!CheckLength([...SelectedData.deviceVulnerability.vulnerabilityInfo]) && [...SelectedData.deviceVulnerability.vulnerabilityInfo].map((item: any) => {
                               return <div className="mb-2">
-                                <a href="/link" className="text-dark">{item.cve}</a>
+                                <a target={'_blank'} href="/link" className="text-dark">{item.cve}</a>
                               </div>
                             })
                           }
@@ -231,6 +245,10 @@ const EndPoints = () => {
                   </Accordion>
                 </div>
               </div>
+              {/* <div className="modal-content mt-3">
+                <div className="modal-body">
+                </div>
+              </div> */}
             </div>
           </div></> : <></>
       }
