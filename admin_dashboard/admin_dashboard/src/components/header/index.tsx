@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navbar, Container, Image, Nav } from "react-bootstrap";
+import { Navbar, Container, Image, Nav, Modal } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import {
   InfoIcon,

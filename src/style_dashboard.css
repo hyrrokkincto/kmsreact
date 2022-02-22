@@ -3420,6 +3420,9 @@ button.btn-theme-dialog {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.service-request-container * {
+  font-size: 14px;
+}
 .reading-girl {
   width: 100%;
   object-fit: cover;
@@ -3433,17 +3436,21 @@ button.btn-theme-dialog {
 }
 .request-form-select label {
   background-color: white;
-  padding: 16px;
+  padding: 6px 16px;
   border-start-start-radius: 8px;
   border-bottom-left-radius: 8px;
   border: 1px solid #e5e1dc;
   font-size: 14px;
+  text-align: center;
+  color: #9f9f9f;
 }
 .request-form-select button {
   background-color: #f1880e;
-  padding: 16px;
+  padding: 4px 16px;
   color: white;
   border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .FAIC {
   display: flex;
@@ -3482,13 +3489,14 @@ textarea.req-form-textarea {
 .request-form-select .request-type-dropdown {
   position: absolute;
   width: 320px;
-  border-radius: 8px;
   border: 1px solid #e5e1dc;
   background-color: white;
   top: 110%;
   right: 0;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.16);
   font-size: 14px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .request-type-dropdown .type-item {
   padding: 16px;

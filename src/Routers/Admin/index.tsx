@@ -4,9 +4,7 @@ import { Redirect, withRouter } from "react-router";
 import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
 
-const RegisterOrganization = React.lazy(
-  () => import("../../pages/RegisterOrganization")
-);
+const RegisterOrganization = React.lazy(() => import("../../pages/RegisterOrganization"));
 const Analytics = React.lazy(() => import("../../pages/Analytics"));
 const RolesComponent = React.lazy(() => import("../../pages/RolesComponent"));
 const AuditComponent = React.lazy(() => import("../../pages/AuditComponent"));

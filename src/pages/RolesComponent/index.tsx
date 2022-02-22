@@ -17,9 +17,17 @@ interface RolesListItem {
   };
 }
 
+interface permissionItem {
+  id: string,
+  resource: string,
+  action: string,
+  description: string
+}
+
+
 const RolesComponent = () => {
   // create role name
-  const [NewRoleName, setNewRoleName] = useState("" as any);
+  const [NewRoleName, setNewRoleName] = useState("" as string);
 
   // data for roles table
   const [RolesListData, setRolesListData] = useState([] as RolesListItem[]);
@@ -36,7 +44,7 @@ const RolesComponent = () => {
   // this is for storing seleted data
   const [SelectedRoleItem, setSelectedRoleItem] = useState({});
 
-  const [PermissonData, setPermissonData] = useState([] as any);
+  const [PermissonData, setPermissonData] = useState([] as permissionItem[]);
 
   // this is for show role settings popup
   const [SettingsPopup, setSettingsPopup] = useState(false);
@@ -119,7 +127,7 @@ const RolesComponent = () => {
         description: "Read audit logs",
       },
     ];
-    setPermissonData(PermissonList as any);
+    setPermissonData(PermissonList);
     setSelectedRoleItem(item);
     setSettingsPopup(true);
   };

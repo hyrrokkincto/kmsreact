@@ -1,9 +1,14 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import * as Feather from "react-feather";
 
 interface RequestTypes {
   value: string,
   label: string
+}
+
+interface handlingEvent {
+  htmlOnChange: React.ChangeEvent<HTMLTextAreaElement>,
+  inputOnChange: React.ChangeEvent<HTMLInputElement>
 }
 
 const ServiceRequest = () => {
@@ -41,6 +46,10 @@ const ServiceRequest = () => {
     resetStates()
   }
 
+  const HandleFormChange = (event: handlingEvent['htmlOnChange'] | handlingEvent['inputOnChange']) => {
+    setMessage(event.target.value)
+  }
+
   return (
     <>
       <div className="page_header">
@@ -53,7 +62,7 @@ const ServiceRequest = () => {
               <div className="col-8">
                 <div className="FAIC mb-4">
                   <div className="w-25">
-                    <h5>Request Form</h5>
+                    <h5><b>Request Form</b></h5>
                   </div>
                   <div className="w-75">
                     <div className="request-form-select"
@@ -75,10 +84,10 @@ const ServiceRequest = () => {
                 </div>
                 <div className="d-flex">
                   <div className="w-25">
-                    <h5>Message:</h5>
+                    <h5><b>Message:</b></h5>
                   </div>
                   <div className="w-75">
-                    <textarea className="req-form-textarea mb-3" value={Message} onChange={(eve) => setMessage(eve.target.value)} rows={8} placeholder="Message Here" />
+                    <textarea className="req-form-textarea mb-3" value={Message} onChange={(event: handlingEvent['htmlOnChange']) => HandleFormChange(event)} rows={8} placeholder="Message Here" />
                     <div className="FJCE">
                       <button className="btn btn-theme-primary me-3" onClick={() => handleSubmitRequest()}>Submit Request</button>
                       <button className="btn btn-theme-secondary" onClick={() => resetStates()}>Cancel</button>

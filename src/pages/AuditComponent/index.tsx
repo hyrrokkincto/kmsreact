@@ -28,8 +28,9 @@ interface AuditListItem {
 }
 
 const AuditComponent = () => {
+
   // filter by user state
-  const [FilterByUser, setFilterByUser] = useState("" as any);
+  const [FilterByUser, setFilterByUser] = useState("" as string);
 
   // this is for popup handling
   const [FilterUsersPopup, setFilterUsersPopup] = useState(false);
@@ -86,6 +87,11 @@ const AuditComponent = () => {
     // ... ( your api code here )
     setFilterUsersPopup(!true);
   };
+
+  const HandlePageClick = (page) => {
+    // your selected page on ( page.selected )
+    // (...) your api call comes here
+  }
 
   return (
     <>
@@ -197,7 +203,7 @@ const AuditComponent = () => {
                 forcePage={0}
                 pageRangeDisplayed={2}
                 disabledClassName={"disable-page"}
-                // onPageChange={HandlePageClick}
+                onPageChange={HandlePageClick}
                 containerClassName={"pagination-styles"}
                 // subContainerClassName={`pages pagination`}
                 activeClassName={"active"}
