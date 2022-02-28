@@ -9,6 +9,8 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./style_dashboard.css";
 import "./Styles/index.css";
 
+import './Styles/OrganizationStyles/index.scss';
+
 ReactDOM.render(
   <BrowserRouter basename="/kms">
     <App />

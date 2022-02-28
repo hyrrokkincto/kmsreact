@@ -3470,7 +3470,7 @@ textarea.req-form-textarea {
 }
 .btn-theme-primary {
   min-width: 120px;
-  padding: 8px 30px;
+  padding: 6px 30px;
   background-color: #f1880e;
   color: #fff;
   font-size: 16px;
@@ -3506,7 +3506,8 @@ textarea.req-form-textarea {
   cursor: pointer;
   color: white;
 }
-.end-point-container {
+.end-point-container,
+.organizations-container {
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -3630,4 +3631,16 @@ textarea.req-form-textarea {
 }
 .btn:focus {
   box-shadow: none;
+}
+
+/* -------------- edit organizations start */
+
+/* @import './Styles/OrganizationStyles/index.scss'; */
+/* @import './Styles/OrganizationStyles/index.scss'; */
+/* @import url("./Styles/OrganizationStyles/index.scss"); */
+
+/* -------------- edit organizations end */
+
+.text-theme {
+  color: #f1880e;
 }

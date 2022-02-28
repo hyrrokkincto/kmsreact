@@ -62,6 +62,13 @@
       "hasChild": false,
       "hypherLink": "/admin/end-points",
       "icon": "database"
+    },
+    {
+      "id": 9,
+      "linkText": "Organizations",
+      "hasChild": false,
+      "hypherLink": "/admin/organizations",
+      "icon": "organization-user"
     }
   ]
 }

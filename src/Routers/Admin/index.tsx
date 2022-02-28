@@ -11,6 +11,7 @@ const AuditComponent = React.lazy(() => import("../../pages/AuditComponent"));
 const GroupComponent = React.lazy(() => import("../../pages/GroupComponent"));
 const ServiceRequest = React.lazy(() => import("../../pages/ServiceRequest"));
 const EndPoints = React.lazy(() => import("../../pages/EndPoints"));
+const Organizations = React.lazy(() => import("../../pages/Organizations"));
 
 const AdminRoute = () => {
   return (
@@ -34,6 +35,7 @@ const AdminRoute = () => {
             <Route exact path="/admin/group" component={GroupComponent} />
             <Route exact path="/admin/service-request" component={ServiceRequest} />
             <Route exact path="/admin/end-points" component={EndPoints} />
+            <Route exact path="/admin/organizations" component={Organizations} />
           </Switch>
         </div>
       </div>
