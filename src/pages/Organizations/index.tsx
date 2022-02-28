@@ -66,6 +66,7 @@ function Organizations() {
     const handleCloseEditPopup = () => {
         setSelectedOrg({} as OrgItemType);
         setEditPopup(!true);
+        setTabOneStep(1)
     }
 
     const handleCorTabControl = (tab: 1 | 2 | 3): void => { setTabOneStep(tab) }
@@ -84,6 +85,7 @@ function Organizations() {
     const handleCloseSubsPopup = () => {
         setSelectedOrg({} as OrgItemType);
         setSubscriptionPopup(!true);
+        setFieldEnable(false)
     }
 
     const handleUpdateSubs = () => {
