@@ -17,7 +17,7 @@ interface ActivityLogItem {
   date: string;
   time: string;
   activityType: string;
-  noOfFiles: string;
+  noOfFiles: number;
   Errors: string;
 }
 

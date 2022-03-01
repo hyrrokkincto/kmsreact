@@ -59,7 +59,7 @@ const ServiceRequest = () => {
         <div className="service-request-container">
           <div className="contianer">
             <div className="row">
-              <div className="col-8">
+              <div className="col-12 col-md-8">
                 <div className="FAIC mb-4">
                   <div className="w-25">
                     <h5><b>Request Form</b></h5>
@@ -95,7 +95,7 @@ const ServiceRequest = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-12 col-md-4">
                 <img src={process.env.PUBLIC_URL + '/assets/img/reading-girl.png'} alt="reading-girl" className="reading-girl" />
               </div>
             </div>

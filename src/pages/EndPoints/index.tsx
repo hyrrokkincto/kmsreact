@@ -54,7 +54,8 @@ const EndPoints = () => {
       </div>
       <div className="container">
         <div className="end-point-container">
-          <table className="end-point-table">
+        <div className="table-responsive">
+          <table className="end-point-table w-100">
             <thead>
               <tr>
                 <th className="text-start">Device Name</th>
@@ -111,7 +112,7 @@ const EndPoints = () => {
               }
             </tbody>
           </table>
-
+          </div>
           <ReactPaginate
             previousLabel={"<"}
             nextLabel={">"}
