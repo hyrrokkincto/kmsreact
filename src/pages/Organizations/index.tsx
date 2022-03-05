@@ -7,6 +7,7 @@ import CorporateTabOne from './CorporateTabOne';
 import CorporateTabTwo from './CorporateTabTwo';
 import CorporateTabThree from './CorporateTabThree';
 import CommonInput from '../../Components/CommonInput';
+import ReactPaginate from 'react-paginate';
 
 export interface OrgItemType {
     CompanyName: string,
@@ -65,19 +66,19 @@ export interface OrgItemTypeListItem {
 }
 
 export interface OrgItemTypeNew {
-    data: {
-        resellerOrganizations: {
-            page: number;
-            count: number;
-            limit: number;
-            list: OrgItemTypeListItem[]
-        }
+    resellerOrganizations: {
+        page: number;
+        count: number;
+        limit: number;
+        list: OrgItemTypeListItem[]
     }
 }
 
 function Organizations() {
 
     const [OraganizationList, setOraganizationList] = useState([] as OrgItemTypeListItem[]);
+
+    const [OraganizationData, setOraganizationData] = useState({} as OrgItemTypeNew);
 
     const [EditPopup, setEditPopup] = useState(false as boolean);
     const [TabOneStep, setTabOneStep] = useState(1 as 1 | 2 | 3);
@@ -87,13 +88,10 @@ function Organizations() {
     const [SubscriptionPopup, setSubscriptionPopup] = useState(false as boolean);
     const [FieldEnable, setFieldEnable] = useState(false as boolean);
 
-
     useEffect(() => {
-
         // (...) your api call comes here;
-
         setOraganizationList(OrgData.data.resellerOrganizations.list);
-
+        setOraganizationData(OrgData.data)
     }, []);
 
     // when on click of edit button -> edit popup
@@ -211,6 +209,21 @@ function Organizations() {
                         }
                     </div>
                 </section>
+                {!!OraganizationData && Object.keys(OraganizationData).length ? <ReactPaginate
+                    previousLabel={"<"}
+                    nextLabel={">"}
+                    breakLabel={"..."}
+                    breakClassName={"break-me"}
+                    pageCount={OraganizationData.resellerOrganizations.count}
+                    marginPagesDisplayed={2}
+                    disableInitialCallback={true}
+                    forcePage={OraganizationData.resellerOrganizations.page}
+                    pageRangeDisplayed={2}
+                    disabledClassName={"disable-page"}
+                    containerClassName={"pagination-styles"}
+                    activeClassName={"active"}
+                /> : <></>}
+
             </Container>
 
             {!!EditPopup ? <CommonPopup
