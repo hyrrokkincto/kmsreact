@@ -1,6 +1,6 @@
 import { Form } from 'react-bootstrap';
 import CommonInput from '../../Components/CommonInput';
-import { OrgItemType, OrgItemTypeListItem } from '.'
+import { OrgItemTypeListItem } from '.'
 
 const CorporateTabTwo = (props) => {
 

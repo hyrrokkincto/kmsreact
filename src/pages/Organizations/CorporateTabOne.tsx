@@ -1,7 +1,7 @@
-import React from 'react'
-import { Button, Col, Form, Row } from 'react-bootstrap'
-import CommonInput from '../../Components/CommonInput'
-import { OrgItemType, OrgItemTypeListItem } from '.'
+import React from 'react';
+import { Button, Col, Form, Row } from 'react-bootstrap';
+import CommonInput from '../../Components/CommonInput';
+import { OrgItemTypeListItem } from '.';
 
 // const CorporateTabOne = ({ data = {}, handleCorTabChange = () => { } }: { data: OrgItemType, handleCorTabControl: () => void }) => {
 // const CorporateTabOne = (props) => {

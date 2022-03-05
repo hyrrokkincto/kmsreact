@@ -1,91 +1,10 @@
 {
-  "organization": [
-    {
-      "CompanyName": "Henry Paulista",
-      "Name": "Henry",
-      "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png",
-      "EmailAddress": "henryp@mail.com",
-      "PhoneNumber": "9875421360",
-      "AddressLine1": "300 E St",
-      "AddressLine2": "SW",
-      "City": "Washington",
-      "State": "DC",
-      "Postcode": "20546",
-      "Country": "USA",
-      "swarm_licensing": {
-        "BillingCode": "xxxxxxxxxx",
-        "LicenseExpiryDate": "2024-05-12",
-        "UserLicenseCount": 5,
-        "DeviceLicenseCount": 10,
-        "Publisher": "Igor Pavlov"
-      },
-      "admin_user": {
-        "FirstName": "Henry",
-        "LastName": "Paulista",
-        "EmailAddress": "henryp@mail.com",
-        "agree": 1
-      }
-    },
-    {
-      "CompanyName": "Adidas",
-      "Name": "Paulista",
-      "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/800px-Adidas_Logo.svg.png",
-      "EmailAddress": "adidas@mail.com",
-      "PhoneNumber": "9875421360",
-      "AddressLine1": "300 E St",
-      "AddressLine2": "SW",
-      "City": "Washington",
-      "State": "DC",
-      "Postcode": "20546",
-      "Country": "USA",
-      "swarm_licensing": {
-        "BillingCode": "xxxxxxxxxx",
-        "LicenseExpiryDate": "2024-05-12",
-        "UserLicenseCount": 5,
-        "DeviceLicenseCount": 10,
-        "Publisher": "Igor Pavlov"
-      },
-      "admin_user": {
-        "FirstName": "Henry",
-        "LastName": "Paulista",
-        "EmailAddress": "henryp@mail.com",
-        "agree": 1
-      }
-    },
-    {
-      "CompanyName": "Puma",
-      "Name": "Puma",
-      "Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ51QJ4Tw3a5KJNrf6Hn_uI3dTmOzThy8bmyv8WJee7odREpNYwZRE1lU2NCn0Lc2wq4Kg&usqp=CAU",
-      "EmailAddress": "puma@mail.com",
-      "PhoneNumber": "9875421360",
-      "AddressLine1": "300 E St",
-      "AddressLine2": "SW",
-      "City": "Washington",
-      "State": "DC",
-      "Postcode": "20546",
-      "Country": "USA",
-      "swarm_licensing": {
-        "BillingCode": "xxxxxxxxxx",
-        "LicenseExpiryDate": "2024-05-12",
-        "UserLicenseCount": 5,
-        "DeviceLicenseCount": 10,
-        "Publisher": "Igor Pavlov"
-      },
-      "admin_user": {
-        "FirstName": "Henry",
-        "LastName": "Paulista",
-        "EmailAddress": "henryp@mail.com",
-        "agree": 1
-      }
-    }
-  ],
   "data": {
     "resellerOrganizations": {
       "page": 1,
       "count": 2,
       "limit": 2,
-      "list": [
-        {
+      "list": [{
           "id": "822996ea-e1f5-4af9-8a0f-f831054ff03a",
           "name": "ffss",
           "email": "onehome@test.theepan",

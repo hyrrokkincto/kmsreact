@@ -9,32 +9,32 @@ import CorporateTabThree from './CorporateTabThree';
 import CommonInput from '../../Components/CommonInput';
 import ReactPaginate from 'react-paginate';
 
-export interface OrgItemType {
-    CompanyName: string,
-    Name: string,
-    Logo: string,
-    EmailAddress: string,
-    PhoneNumber: string,
-    AddressLine1: string,
-    AddressLine2: string,
-    City: string,
-    State: string,
-    Postcode: string,
-    Country: string,
-    swarm_licensing: {
-        BillingCode: string,
-        LicenseExpiryDate: string,
-        UserLicenseCount: number,
-        DeviceLicenseCount: number,
-        Publisher: string
-    },
-    admin_user: {
-        FirstName: string,
-        LastName: string,
-        EmailAddress: string,
-        agree: number
-    }
-}
+// export interface OrgItemType {
+//     CompanyName: string,
+//     Name: string,
+//     Logo: string,
+//     EmailAddress: string,
+//     PhoneNumber: string,
+//     AddressLine1: string,
+//     AddressLine2: string,
+//     City: string,
+//     State: string,
+//     Postcode: string,
+//     Country: string,
+//     swarm_licensing: {
+//         BillingCode: string,
+//         LicenseExpiryDate: string,
+//         UserLicenseCount: number,
+//         DeviceLicenseCount: number,
+//         Publisher: string
+//     },
+//     admin_user: {
+//         FirstName: string,
+//         LastName: string,
+//         EmailAddress: string,
+//         agree: number
+//     }
+// }
 
 export interface OrgItemTypeListItem {
     id: string;
