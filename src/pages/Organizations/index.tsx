@@ -35,14 +35,54 @@ export interface OrgItemType {
     }
 }
 
+export interface OrgItemTypeListItem {
+    id: string;
+    name: string;
+    email: string;
+    organization_type: string;
+    phone: string;
+    logo: string;
+    license: {
+        billingCode: string;
+        expiryDate: string;
+        userLicenseCount: string;
+        deviceLicenseCount: string;
+    },
+    address: {
+        line_1: string;
+        line_2: string;
+        city: string;
+        state: string;
+        postal_code: string;
+        country: string;
+    },
+    admin_user: {
+        first_name: string,
+        last_name: string,
+        email_address: string,
+        agree: number
+    }
+}
+
+export interface OrgItemTypeNew {
+    data: {
+        resellerOrganizations: {
+            page: number;
+            count: number;
+            limit: number;
+            list: OrgItemTypeListItem[]
+        }
+    }
+}
+
 function Organizations() {
 
-    const [OraganizationList, setOraganizationList] = useState([] as OrgItemType[]);
+    const [OraganizationList, setOraganizationList] = useState([] as OrgItemTypeListItem[]);
 
     const [EditPopup, setEditPopup] = useState(false as boolean);
     const [TabOneStep, setTabOneStep] = useState(1 as 1 | 2 | 3);
 
-    const [SelectedOrg, setSelectedOrg] = useState({} as OrgItemType);
+    const [SelectedOrg, setSelectedOrg] = useState({} as OrgItemTypeListItem);
 
     const [SubscriptionPopup, setSubscriptionPopup] = useState(false as boolean);
     const [FieldEnable, setFieldEnable] = useState(false as boolean);
@@ -52,19 +92,19 @@ function Organizations() {
 
         // (...) your api call comes here;
 
-        setOraganizationList(OrgData.organization);
+        setOraganizationList(OrgData.data.resellerOrganizations.list);
 
     }, []);
 
     // when on click of edit button -> edit popup
-    const OnClickEditGroup = (org: OrgItemType) => {
+    const OnClickEditGroup = (org: OrgItemTypeListItem) => {
         setSelectedOrg({ ...org });
         setEditPopup(true);
     }
 
     // when on click of close button -> edit popup
     const handleCloseEditPopup = () => {
-        setSelectedOrg({} as OrgItemType);
+        setSelectedOrg({} as OrgItemTypeListItem);
         setEditPopup(!true);
         setTabOneStep(1)
     }
@@ -77,21 +117,29 @@ function Organizations() {
     }
 
     // when on click of edit button -> edit popup
-    const OnClickSubsGroup = (org: OrgItemType) => {
+    const OnClickSubsGroup = (org: OrgItemTypeListItem) => {
         setSelectedOrg({ ...org });
         setSubscriptionPopup(true);
     }
 
     const handleCloseSubsPopup = () => {
-        setSelectedOrg({} as OrgItemType);
+        setSelectedOrg({} as OrgItemTypeListItem);
         setSubscriptionPopup(!true);
         setFieldEnable(false)
     }
 
     const handleUpdateSubs = () => {
         // (...) api code comes here 
-        setSelectedOrg({} as OrgItemType);
+        setSelectedOrg({} as OrgItemTypeListItem);
         setSubscriptionPopup(!true);
+    }
+
+
+    const handleFormChange = (event: any, set?: string) => {
+        switch (set?.split('.').length) {
+            case 2: return setSelectedOrg(prev => ({ ...prev, [set?.split('.')[1]]: event.target.value }))
+            case 3: return setSelectedOrg(prev => ({ ...prev, [set?.split('.')[1]]: { ...prev[set?.split('.')[1]], [set?.split('.')[2]]: event.target.value } }))
+        }
     }
 
     return (
@@ -105,7 +153,7 @@ function Organizations() {
                         {
                             !!OraganizationList && OraganizationList.length ? (
                                 OraganizationList.map((org, index) => {
-                                    return <div className="col-12 col-md-6 col-lg-4" key={org.CompanyName + index}>
+                                    return <div className="col-12 col-md-6 col-lg-4" key={org.name + index}>
                                         <div className="card">
                                             <span
                                                 className="action"
@@ -117,28 +165,25 @@ function Organizations() {
                                             </span>
                                             <div className="body">
                                                 <img
-                                                    src={org.Logo}
+                                                    src={org.logo}
                                                     alt="profile"
                                                     className="profile_picture img-fluid mb-3"
                                                 />
-                                                <h5>{org.CompanyName}</h5>
-                                                <p>{org.EmailAddress}</p>
-                                                <p>{`${org.AddressLine1} ${org.AddressLine2} ${org.City} ${org.State} ${org.Country}`}</p>
+                                                <h5>{org.name}</h5>
+                                                <p>{org.email}</p>
+                                                <p>{`${org.address.line_1} ${org.address.line_2} ${org.address.city} ${org.address.state} ${org.address.country}`}</p>
                                             </div>
                                             <div className="footer">
                                                 <span
                                                     className="action add-user-parent"
                                                     tabIndex={1}
                                                     onClick={() => OnClickSubsGroup(org)}
-                                                // onBlur={(event) => HandleDropdownBlur(event)}
                                                 >
                                                     <FileRefresh />
                                                 </span>
                                                 <span
                                                     className="action search-user-parent"
                                                     tabIndex={1}
-                                                // onClick={() => OnClickSearchUser(group)}
-                                                // onBlur={(event) => HandleDropdownBlur(event)}
                                                 >
                                                     <svg className="action_icon">
                                                         <use
@@ -149,8 +194,6 @@ function Organizations() {
                                                 <span
                                                     className="action add-user-parent"
                                                     tabIndex={1}
-                                                // onClick={() => OnClickAddUser(group)}
-                                                // onBlur={(event) => HandleDropdownBlur(event)}
                                                 >
                                                     <svg className="action_icon">
                                                         <use
@@ -178,9 +221,9 @@ function Organizations() {
                 <Tabs defaultActiveKey="Corporate" id="uncontrolled-tab-example" className="edit-org-container mt-3">
                     <Tab eventKey="Corporate" title="Corporate">
                         {
-                            TabOneStep === 1 ? <CorporateTabOne data={SelectedOrg} setTabOneStep={setTabOneStep} />
-                                : TabOneStep === 2 ? <CorporateTabTwo data={SelectedOrg} setTabOneStep={setTabOneStep} />
-                                    : TabOneStep === 3 ? <CorporateTabThree data={SelectedOrg} setTabOneStep={setTabOneStep} handleCreate={handleCreate} />
+                            TabOneStep === 1 ? <CorporateTabOne data={SelectedOrg} setTabOneStep={setTabOneStep} setSelectedOrg={setSelectedOrg} />
+                                : TabOneStep === 2 ? <CorporateTabTwo data={SelectedOrg} setTabOneStep={setTabOneStep} setSelectedOrg={setSelectedOrg} />
+                                    : TabOneStep === 3 ? <CorporateTabThree data={SelectedOrg} setTabOneStep={setTabOneStep} setSelectedOrg={setSelectedOrg} handleCreate={handleCreate} />
                                         : <></>
                         }
                     </Tab>
@@ -199,15 +242,15 @@ function Organizations() {
                     <div className='w-75'>
                         <div className='FAIC mb-4'>
                             <small className='w-50'><b>License Expiry Date</b></small>
-                            <CommonInput disabled={!FieldEnable} className='ms-2 w-50 mb-0' type='date' name='LicenseExpiryDate' value={SelectedOrg.swarm_licensing.LicenseExpiryDate} />
+                            <CommonInput disabled={!FieldEnable} className='ms-2 w-50 mb-0' type='date' name='LicenseExpiryDate' value={SelectedOrg.license.expiryDate} onChange={(event) => handleFormChange(event, 'SelectedOrg.license.expiryDate')} />
                         </div>
                         <div className='FAIC mb-4'>
                             <small className='w-50'><b>User License count</b></small>
-                            <CommonInput disabled={!FieldEnable} className='ms-2 w-50 mb-0' type='number' name='UserLicenseCount' value={SelectedOrg.swarm_licensing.UserLicenseCount} />
+                            <CommonInput disabled={!FieldEnable} className='ms-2 w-50 mb-0' type='number' name='UserLicenseCount' value={SelectedOrg.license.userLicenseCount} onChange={(event) => handleFormChange(event, 'SelectedOrg.license.userLicenseCount')} />
                         </div>
                         <div className='FAIC mb-4'>
                             <small className='w-50'><b>Device License Count</b></small>
-                            <CommonInput disabled={!FieldEnable} className='ms-2 w-50 mb-0' type='number' name='DeviceLicenseCount' value={SelectedOrg.swarm_licensing.DeviceLicenseCount} />
+                            <CommonInput disabled={!FieldEnable} className='ms-2 w-50 mb-0' type='number' name='DeviceLicenseCount' value={SelectedOrg.license.deviceLicenseCount} onChange={(event) => handleFormChange(event, 'SelectedOrg.license.deviceLicenseCount')} />
                         </div>
                     </div>
                     <div className='w-25'>
@@ -215,7 +258,7 @@ function Organizations() {
                     </div>
                 </Form>
 
-                {!!FieldEnable && <Form.Check className='mb-4' checked={!!SelectedOrg.admin_user.agree} id='agree' label={<>
+                {!!FieldEnable && <Form.Check className='mb-4' checked={!!SelectedOrg.admin_user.agree} onChange={(event) => setSelectedOrg(prev => ({ ...prev, admin_user: { ...prev.admin_user, agree: !!event.target.checked ? 1 : 0 } }))} id='agree' label={<>
                     I agree to the <a href='/term-conditions'>Terms and conditions</a>
                 </>} />}
                 <div className='FJCEAIC'>
@@ -247,3 +290,64 @@ const FileRefresh = () => <svg xmlns="http://www.w3.org/2000/svg" width="20" hei
     <path id="ic_replay_24px" d="M6.444,2.222V1L4.917,2.528,6.444,4.055V2.833A1.833,1.833,0,1,1,4.611,4.667H4A2.444,2.444,0,1,0,6.444,2.222Z" transform="translate(8.056 10.445)" fill="#888" />
 </svg>
 
+
+
+// {
+//     false && !!OraganizationList && OraganizationList.length ? (
+//         OraganizationList.map((org, index) => {
+//             return <div className="col-12 col-md-6 col-lg-4" key={org.CompanyName + index}>
+//                 <div className="card">
+//                     <span
+//                         className="action"
+//                         onClick={() => OnClickEditGroup(org)}
+//                     >
+//                         <svg className="action_icon" width="15">
+//                             <use xlinkHref={UserIconsSvg + "#edit"}></use>
+//                         </svg>
+//                     </span>
+//                     <div className="body">
+//                         <img
+//                             src={org.Logo}
+//                             alt="profile"
+//                             className="profile_picture img-fluid mb-3"
+//                         />
+//                         <h5>{org.CompanyName}</h5>
+//                         <p>{org.EmailAddress}</p>
+//                         <p>{`${org.AddressLine1} ${org.AddressLine2} ${org.City} ${org.State} ${org.Country}`}</p>
+//                     </div>
+//                     <div className="footer">
+//                         <span
+//                             className="action add-user-parent"
+//                             tabIndex={1}
+//                             onClick={() => OnClickSubsGroup(org)}
+//                         >
+//                             <FileRefresh />
+//                         </span>
+//                         <span
+//                             className="action search-user-parent"
+//                             tabIndex={1}
+//                         >
+//                             <svg className="action_icon">
+//                                 <use
+//                                     xlinkHref={UserIconsSvg + "#group"}
+//                                 ></use>
+//                             </svg>
+//                         </span>
+//                         <span
+//                             className="action add-user-parent"
+//                             tabIndex={1}
+//                         >
+//                             <svg className="action_icon">
+//                                 <use
+//                                     xlinkHref={UserIconsSvg + "#new-user"}
+//                                 ></use>
+//                             </svg>
+//                         </span>
+//                     </div>
+//                 </div>
+//             </div>
+//         })
+//     ) : <>
+//         No data found
+//     </>
+// }

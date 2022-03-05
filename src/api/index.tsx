@@ -21,7 +21,6 @@ export const LoginRequest = async (url = "", body = {}) => {
         return await response.json();
     }
     catch (e) {
-        console.log(e);
         return e;
     }
 };

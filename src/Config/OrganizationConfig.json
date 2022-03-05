@@ -78,5 +78,70 @@
         "agree": 1
       }
     }
-  ]
+  ],
+  "data": {
+    "resellerOrganizations": {
+      "page": 1,
+      "count": 2,
+      "limit": 2,
+      "list": [
+        {
+          "id": "822996ea-e1f5-4af9-8a0f-f831054ff03a",
+          "name": "ffss",
+          "email": "onehome@test.theepan",
+          "organization_type": "home",
+          "phone": "5343453453",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png",
+          "license": {
+            "billingCode": "xxxxxxxxxx",
+            "expiryDate": "2024-05-12",
+            "userLicenseCount": "5",
+            "deviceLicenseCount": "10"
+          },
+          "address": {
+            "line_1": "ss",
+            "line_2": "sdf",
+            "city": "ffs",
+            "state": "ddsdf",
+            "postal_code": "s",
+            "country": "Canada"
+          },
+          "admin_user": {
+            "first_name": "Henry",
+            "last_name": "Paulista",
+            "email_address": "henryp@mail.com",
+            "agree": 1
+          }
+        },
+        {
+          "id": "8c2b6a8d-6d79-4aff-beeb-131697310a7e",
+          "name": "one corp",
+          "email": "onecorp@test.theepan",
+          "organization_type": "corporate",
+          "phone": "2345234234",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/800px-Adidas_Logo.svg.png",
+          "license": {
+            "billingCode": "xxxxxxxxxx",
+            "expiryDate": "2024-05-12",
+            "userLicenseCount": "5",
+            "deviceLicenseCount": "10"
+          },
+          "address": {
+            "line_1": "ss",
+            "line_2": "aa",
+            "city": "ddf",
+            "state": "ssdf",
+            "postal_code": "sdf",
+            "country": "Canada"
+          },
+          "admin_user": {
+            "first_name": "Henry",
+            "last_name": "Paulista",
+            "email_address": "henryp@mail.com",
+            "agree": 1
+          }
+        }
+      ]
+    }
+  }
 }

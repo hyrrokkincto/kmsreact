@@ -8,6 +8,7 @@ const CommonInput = (props) => {
             value={props.value}
             className={"commmon-input-container " + props.className}
             disabled={!!props.disabled ? true : false}
+            onChange={!!props.onChange ? props.onChange : {}}
         />
     )
 }
