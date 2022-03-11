@@ -1,0 +1,114 @@
+.app-main-inner{
+    margin: 40px;
+    .inner-wrapper{
+        background-color: #FFF;
+        border-radius: 15px;
+        padding: 60px;
+        .invoive-wrapper{
+            .print-button{
+                a{
+                    color: #000;
+                    padding-right: 20px;
+                    text-decoration: none;
+                }
+            }
+            .invoice-header {
+                background-color: #000000;
+                padding: 60px;
+                h6 {
+                    color: #F1880E;
+                }
+                p {
+                    color: #FFF;
+                }
+                h3 { 
+                    color: #F1880E;
+                    padding-bottom: 20px;
+                }
+            }
+            .invoice-content {
+                padding: 20px 40px 40px;
+                .inv-address{
+                    h4 {
+                        margin-top: 20px;
+                        font-size: 16px;
+                        font-weight: 700; 
+                    }
+                }
+                .tax{
+                    h4{
+                        font-size: 16px;
+                        font-weight: 700;  
+                    }
+                } 
+            }
+            .item-table{
+                .table>thead {
+                    background-color: #F6F6F6;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    th{
+                        padding: 1rem 0.5rem;
+                        &:first-child {
+                            padding-left: 60px;
+                        }
+                    }
+                }
+                .table>tbody {
+                    tr{
+                        &:first-child{
+                            td{
+                                padding-top: 30px;
+                            } 
+                        }
+                        td{
+                            &:first-child{
+                                padding-left: 60px;
+                            } 
+                        }
+                    }
+                }
+            }
+            .invoice-footer {
+                padding-left: 60px;
+            }
+        } 
+    }
+}
+@media (max-width: 768px) {
+    .app-main-inner{
+            margin: 15px;
+        .inner-wrapper{
+                padding: 15px;
+            .invoive-wrapper{
+                .invoice-header{
+                    padding: 25px;
+                }
+                .invoice-content{
+                    padding: 10px 10px 20px;
+                }
+                .item-table{
+                    .table>thead {
+                        th{
+                            &:first-child {
+                                padding-left: 25px;
+                            } 
+                        }
+                    }
+                    .table>tbody {
+                        tr{
+                            td{
+                                &:first-child{
+                                    padding-left: 25px;
+                                } 
+                            }
+                        }
+                    }
+                }
+                .invoice-footer {
+                    padding-left: 25px;
+                }
+            } 
+        } 
+    }
+}

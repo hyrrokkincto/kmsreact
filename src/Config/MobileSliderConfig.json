@@ -69,6 +69,13 @@
       "hasChild": false,
       "hypherLink": "/admin/organizations",
       "icon": "organization-user"
+    },
+    {
+      "id": 10,
+      "linkText": "Invoice",
+      "hasChild": false,
+      "hypherLink": "/admin/invoice",
+      "icon": "sliders"
     }
   ]
 }

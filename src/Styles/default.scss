@@ -72,11 +72,21 @@
 .ml-15 {
     margin-left: 15px !important;
 }
+.m-40{
+    margin: 40px;
+}
 .py-50 {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
+} 
+.p-60{
+    padding: 60px;
 }
-
+.b-line {
+    background-color: #000;
+    width: 90%;
+    height: 2px;
+}
 .com-select {
     width: 250px;
     height: 50px;
@@ -262,3 +272,4 @@
     opacity: 0.5;
     cursor: no-drop !important;
 }
+ 

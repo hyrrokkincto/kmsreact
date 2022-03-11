@@ -5,10 +5,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-// import './Styles/index.scss';
+import './Styles/index.scss';
 import "./style_dashboard.css";
-import "./Styles/index.css";
-
+import "./Styles/index.css"; 
 import './Styles/OrganizationStyles/index.scss';
 
 ReactDOM.render(
