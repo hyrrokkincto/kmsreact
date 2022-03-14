@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Form, FormControl, InputGroup } from 'react-bootstrap'
+import {Form} from 'react-bootstrap'
 import SalesAnalyticsConfigData from "../../Config/SalesAnalyticsConfig.json"
 import * as Feather from 'react-feather';
 import ReactPaginate from "react-paginate";
