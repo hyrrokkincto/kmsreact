@@ -13,6 +13,7 @@ const ServiceRequest = React.lazy(() => import("../../pages/ServiceRequest"));
 const EndPoints = React.lazy(() => import("../../pages/EndPoints"));
 const Organizations = React.lazy(() => import("../../pages/Organizations"));
 const Invoice = React.lazy(() => import("../../pages/Invoice"));
+const SalesAnalytics = React.lazy(() => import("../../pages/SalesAnalytics"));
 
 const AdminRoute = () => {
   return (
@@ -38,6 +39,7 @@ const AdminRoute = () => {
             <Route exact path="/admin/end-points" component={EndPoints} />
             <Route exact path="/admin/organizations" component={Organizations} />
             <Route exact path="/admin/invoice" component={Invoice} />
+            <Route exact path="/admin/sales-analytics" component={SalesAnalytics} />
           </Switch>
         </div>
       </div>

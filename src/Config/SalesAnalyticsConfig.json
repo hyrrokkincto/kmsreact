@@ -1,0 +1,26 @@
+[
+    {
+      "invoiceId":"PO1234567",
+      "contractId":"2022-abc-1",
+      "invoiceDate":"2020-20-08 08:50",
+      "licenseCount":"4",
+      "freeCount":"1",
+      "activatedCount":"1",
+      "deactivatedCount":"0",
+      "expiredCount":"0",
+      "dispatchedCount":"0",
+      "repairsCount":"1"
+    },
+    {
+      "invoiceId":"PO1234568",
+      "contractId":"2022-abc-2",
+      "invoiceDate":"2020-20-08 08:50",
+      "licenseCount":"4",
+      "freeCount":"1",
+      "activatedCount":"1",
+      "deactivatedCount":"0",
+      "expiredCount":"0",
+      "dispatchedCount":"0",
+      "repairsCount":"1"
+    }
+   ]

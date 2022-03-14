@@ -76,6 +76,13 @@
       "hasChild": false,
       "hypherLink": "/admin/invoice",
       "icon": "sliders"
+    },
+    {
+      "id": 11,
+      "linkText": "SalesAnalytics",
+      "hasChild": false,
+      "hypherLink": "/admin/sales-analytics",
+      "icon": "sliders"
     }
   ]
 }

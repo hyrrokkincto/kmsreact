@@ -1,9 +1,9 @@
-import React from 'react' 
+import React, { useState, useEffect } from "react";
 import { Card, Col, Image, Row, Table } from 'react-bootstrap'
-import * as Feather from 'react-feather';
+import * as Feather from 'react-feather' 
 import { Link } from 'react-router-dom' 
-const Invoice = () =>{
-
+  
+const Invoice = () =>{ 
     return (
       <>
          <div className="page_header">
@@ -89,7 +89,7 @@ const Invoice = () =>{
                                                 <tr>
                                                     <td></td>
                                                     <td colSpan={3}>
-                                                        <div class="b-line"></div>
+                                                        <div className="b-line"></div>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -99,7 +99,7 @@ const Invoice = () =>{
                                                 </tr>
                                                 <tr>
                                                     <td></td>
-                                                    <td colSpan={2}>Discount <span class="text-muted">(New Year)</span></td> 
+                                                    <td colSpan={2}>Discount <span className="text-muted">(New Year)</span></td> 
                                                     <td>$-9</td>
                                                 </tr>
                                                 <tr>
@@ -114,7 +114,7 @@ const Invoice = () =>{
                                                 </tr>
                                                 <tr>
                                                     <td></td>
-                                                    <td colSpan={3}><div class="b-line"></div></td> 
+                                                    <td colSpan={3}><div className="b-line"></div></td> 
                                                 </tr>
                                                 <tr>
                                                     <td></td>
