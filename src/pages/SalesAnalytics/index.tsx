@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {FormControl, InputGroup } from 'react-bootstrap'
+import {Form, FormControl, InputGroup } from 'react-bootstrap'
 import SalesAnalyticsConfigData from "../../Config/SalesAnalyticsConfig.json"
 import * as Feather from 'react-feather';
 import ReactPaginate from "react-paginate";
@@ -38,29 +38,19 @@ const [SalesAnalyticsList, setSalesAnalyticsList] = useState([] as SalesListItem
         <div className="custom-container">
         <div className="filter">
             <div className='row align-items-center justify-content-end'>
-                <div className='col-md-7'>
-                    <div className='row align-items-center'>
-                        <div className='col-md-4'> 
-                             <InputGroup>
-                                <FormControl
-                                type="date" 
-                                aria-label="from-date"
-                                aria-describedby="from-date"
-                                />
-                                <InputGroup.Text className="bg-block" id="from-date"><Feather.Calendar /></InputGroup.Text>
-                            </InputGroup>
+                <div className='col-md-10 col-lg-10 col-xl-7'>
+                    <div className='row align-items-center justify-content-end'>
+                        <div className='col-md-4 mb-3'> 
+                            <Form.Group controlId="exampleForm.ControlInput1"> 
+                              <Form.Control type="date" />
+                            </Form.Group>
                         </div>
-                        <div className='col-md-4'> 
-                             <InputGroup>
-                                <FormControl
-                                type="date" 
-                                aria-label="to-date"
-                                aria-describedby="to-date"
-                                />
-                                <InputGroup.Text className="bg-theme" id="to-date"><Feather.Calendar /></InputGroup.Text>
-                            </InputGroup>
+                        <div className='col-md-4 mb-3'> 
+                          <Form.Group controlId="exampleForm.ControlInput1"> 
+                            <Form.Control type="date" />
+                          </Form.Group>
                         </div>
-                        <div className='col-md-4'> 
+                        <div className='col-md-3 mb-3 text-xl-center'> 
                             <button className="btn btn-theme-primary me-3">Submit</button>
                         </div>
                     </div>
@@ -103,31 +93,7 @@ const [SalesAnalyticsList, setSalesAnalyticsList] = useState([] as SalesListItem
                       })
                     ) : (
                       <></>
-                    )}
-                      {/* <tr>
-                        <td>PO1234567</td>
-                        <td>2022-abc-1	</td>
-                        <td>2020-20-08 08:50</td>
-                        <td>4</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>PO1234567</td>
-                        <td>2022-abc-1	</td>
-                        <td>2020-20-08 08:50</td>
-                        <td>4</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>1</td>
-                      </tr> */}
+                    )} 
                 </tbody>
             </table> 
         </div> 
