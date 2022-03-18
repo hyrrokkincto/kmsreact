@@ -83,6 +83,13 @@
       "hasChild": false,
       "hypherLink": "/admin/sales-analytics",
       "icon": "sliders"
+    },
+    {
+      "id": 12,
+      "linkText": "ControlCenter",
+      "hasChild": false,
+      "hypherLink": "/admin/control-center",
+      "icon": "sliders"
     }
   ]
 }

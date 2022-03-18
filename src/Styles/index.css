@@ -625,3 +625,21 @@ code {
     }
 }
 /*# sourceMappingURL=main.d16b1f70.chunk.css.map */
+
+
+/* control Center */
+.control-center h4{
+    text-align: right;
+    padding-right: 20px;
+}
+.control-center .card{
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0px 3px 11px rgb(0 0 0 / 16%);
+    padding: 1rem 1.4rem;
+    margin-bottom: 1.4rem;
+    border: 1px solid transparent; 
+}
+.control-center .card .row-grid:not(:first-child) {
+    border-top: 2px solid #DDD; 
+}
