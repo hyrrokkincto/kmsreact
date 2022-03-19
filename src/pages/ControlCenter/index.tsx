@@ -5,28 +5,31 @@ export interface ControlCenterListItem {
     general: GeneralListItem[];
     desktop: DesktopListItem[];
     mobile: MobileListItem[];
-  }
-  
-  export interface GeneralListItem {
+}
+
+export interface GeneralListItem {
     code: string;
     name: string;
     menu: string;
     order: number;
-  }
-  
-  export interface DesktopListItem {
+    value: number;
+}
+
+export interface DesktopListItem {
     code: string;
     name: string;
     menu: string;
     order: number;
-  }
-  
-  export interface MobileListItem {
+    value: number;
+}
+
+export interface MobileListItem {
     code: string;
     name: string;
     menu: string;
     order: number;
-  }
+    value: number;
+}
 
 const ControlCenter = () => {
     const [GeneralList, setGeneralList] = useState([] as GeneralListItem[]);
@@ -36,112 +39,120 @@ const ControlCenter = () => {
 
     useEffect(() => {
         // ... your initial api call inside here
-    
-      setControlCenterList(...ControlCenterConfigData); 
+
+        setGeneralList(ControlCenterConfigData.general);
+        setDesktopList(ControlCenterConfigData.desktop);
+        setMobileList(ControlCenterConfigData.mobile);
     },
-    []
-    ); 
+        []
+    );
+    const onSwitchAction = (code) => {
+        alert(code);
+        //Call PostAPI (to save a setting change):
+    };
     return (
-      <>
-       <div className="page_header">
-            <h1>Control Center</h1>
-        </div>
-        <div className="custom-container">
-            <div className='control-center'>
-                <Row>
-                    <Col md={4}>
-                        <h4>General</h4>
-                    </Col>
-                    <Col md={6}>
-                        <div className='card'>
-                            <div className='row row-grid py-4 align-items-center'>
-                                <div className='col-md-8'>
-                                    Backup Data to Cloud  
-                                </div>
-                                <div className='col-md-4'>
-                                    <Form.Switch className='custom-switch-green' checked={true} id='swich-enable' />
-                                </div>
-                            </div> 
-                            <div className='row row-grid py-4 align-items-center'>
-                                <div className='col-md-8'>
-                                    Backup Data to Cloud  
-                                </div>
-                                <div className='col-md-4'>
-                                    <Form.Switch className='custom-switch-green' checked={true} id='swich-enable' />
-                                </div>
-                            </div> 
-                        </div>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={4}>
-                        <h4>Desktop</h4>
-                    </Col>
-                    <Col md={6}>
-                        <div className='card'>
-                            <div className='row row-grid py-4 align-items-center'>
-                                <div className='col-md-8'>
-                                    Backup Data to Cloud  
-                                </div>
-                                <div className='col-md-4'>
-                                    <Form.Switch className='custom-switch-green' checked={true} id='swich-enable' />
-                                </div>
-                            </div> 
-                            <div className='row row-grid py-4 align-items-center'>
-                                <div className='col-md-8'>
-                                    Backup Data to Cloud  
-                                </div>
-                                <div className='col-md-4'>
-                                    <Form.Switch className='custom-switch-green' id='swich-enable' />
-                                </div>
-                            </div> 
-                        </div>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={4}>
-                        <h4>Mobile</h4>
-                    </Col>
-                    <Col md={6}>
-                        <div className='card'>
-                            <div className='row row-grid py-4 align-items-center'>
-                                <div className='col-md-8'>
-                                    Backup Data to Cloud  
-                                </div>
-                                <div className='col-md-4'>
-                                    <Form.Switch className='custom-switch-green' checked={true} id='swich-enable' />
-                                </div>
-                            </div> 
-                            <div className='row row-grid py-4 align-items-center'>
-                                <div className='col-md-8'>
-                                    Backup Data to Cloud  
-                                </div>
-                                <div className='col-md-4'>
-                                    <Form.Switch className='custom-switch-green' checked={true} id='swich-enable' />
-                                </div>
-                            </div> 
-                            <div className='row row-grid py-4 align-items-center'>
-                                <div className='col-md-8'>
-                                    Backup Data to Cloud  
-                                </div>
-                                <div className='col-md-4'>
-                                    <Form.Switch className='custom-switch-green' checked={true} id='swich-enable' />
-                                </div>
-                            </div> 
-                            <div className='row row-grid py-4 align-items-center'>
-                                <div className='col-md-8'>
-                                    Backup Data to Cloud  
-                                </div>
-                                <div className='col-md-4'>
-                                    <Form.Switch className='custom-switch-green' checked={true} id='swich-enable' />
-                                </div>
-                            </div>  
-                        </div>
-                    </Col>
-                </Row>
+        <>
+            <div className="page_header">
+                <h1>Control Center</h1>
             </div>
-        </div>
-      </>
+            <div className="custom-container">
+                <div className='control-center'>
+                    <Row>
+                        <Col md={4}>
+                            <h4>General</h4>
+                        </Col>
+                        <Col md={6}>
+                            <div className='card'>
+                                {
+                                    !!GeneralList && GeneralList.length ? (
+                                        GeneralList.map((row, index) => {
+                                            return <>
+                                                <div className='row row-grid py-4 align-items-center'>
+                                                    <div className='col-md-8'>
+                                                        {row.name}
+                                                    </div>
+                                                    <div className='col-md-4'>
+                                                        <Form.Check type="switch" className='custom-switch-green'
+                                                            defaultChecked={row.value ? true : false}
+                                                            id={row.code}
+                                                            onClick={() => onSwitchAction(row.code)}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </>
+                                        })
+                                    ) : <>
+                                        No data found
+                                    </>
+                                }
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={4}>
+                            <h4>Desktop</h4>
+                        </Col>
+                        <Col md={6}>
+                            <div className='card'>
+                                {
+                                    !!DesktopList && DesktopList.length ? (
+                                        DesktopList.map((row, index) => {
+                                            return <>
+                                                <div className='row row-grid py-4 align-items-center'>
+                                                    <div className='col-md-8'>
+                                                        {row.name}
+                                                    </div>
+                                                    <div className='col-md-4'>
+                                                        <Form.Check type="switch" className='custom-switch-green'
+                                                            defaultChecked={row.value ? true : false}
+                                                            id={row.code}
+                                                            onClick={() => onSwitchAction(row.code)}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </>
+                                        })
+                                    ) : <>
+                                        No data found
+                                    </>
+                                }
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={4}>
+                            <h4>Mobile</h4>
+                        </Col>
+                        <Col md={6}>
+                            <div className='card'>
+                                {
+                                    !!MobileList && MobileList.length ? (
+                                        MobileList.map((row, index) => {
+                                            return <>
+                                                <div className='row row-grid py-4 align-items-center'>
+                                                    <div className='col-md-8'>
+                                                        {row.name}
+                                                    </div>
+                                                    <div className='col-md-4'>
+                                                        <Form.Check type="switch" className='custom-switch-green'
+                                                            defaultChecked={row.value ? true : false}
+                                                            id={row.code}
+                                                            onClick={() => onSwitchAction(row.code)}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </>
+                                        })
+                                    ) : <>
+                                        No data found
+                                    </>
+                                }
+                            </div>
+                        </Col>
+                    </Row>
+                </div>
+            </div>
+        </>
     )
 }
 

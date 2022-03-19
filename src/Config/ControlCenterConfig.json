@@ -1,34 +1,39 @@
 {
 
-    "general": [{
+   "general": [{
 
-                   "code": "photoProtect",
-                   "name": "Photo protect and backup",
-                   "menu": "general",
-                   "order": 1
-                     }],
+      "code": "photoProtect",
+      "name": "Photo protect and backup",
+      "menu": "general",
+      "order": 1,
+      "value": 1
+   }],
 
-    "desktop": [{
+   "desktop": [{
 
-                   "code": "photoProtect",
-                   "name": "Photo protect and backup",
-                   "menu": "general",
-                   "order": 1
-                     }],
+      "code": "photoProtect",
+      "name": "Photo protect and backup",
+      "menu": "general",
+      "order": 1,
+      "value": 1
+   }],
 
-    "mobile": [{
+   "mobile": [{
 
-                   "code": "docProtect",
-                   "name": "Document protect and backup",
-                   "menu": "mobile",
-                   "order": 1
-                   },
-                {
+         "code": "docProtect",
+         "name": "Document protect and backup",
+         "menu": "mobile",
+         "order": 1,
+         "value": 0
+      },
+      {
 
-                   "code": "docProtect",
-                   "name": "Document protect and backup",
-                   "menu": "mobile",
-                   "order": 2
-                }]
+         "code": "docProtect",
+         "name": "Document protect and backup",
+         "menu": "mobile",
+         "order": 2,
+         "value": 1
+      }
+   ]
 
 }
