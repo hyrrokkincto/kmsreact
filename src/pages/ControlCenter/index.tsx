@@ -1,8 +1,46 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from "react";
 import { Col, Form, Row } from 'react-bootstrap'
+import ControlCenterConfigData from "../../Config/ControlCenterConfig.json"
+export interface ControlCenterListItem {
+    general: GeneralListItem[];
+    desktop: DesktopListItem[];
+    mobile: MobileListItem[];
+  }
+  
+  export interface GeneralListItem {
+    code: string;
+    name: string;
+    menu: string;
+    order: number;
+  }
+  
+  export interface DesktopListItem {
+    code: string;
+    name: string;
+    menu: string;
+    order: number;
+  }
+  
+  export interface MobileListItem {
+    code: string;
+    name: string;
+    menu: string;
+    order: number;
+  }
 
 const ControlCenter = () => {
+    const [GeneralList, setGeneralList] = useState([] as GeneralListItem[]);
+    const [DesktopList, setDesktopList] = useState([] as DesktopListItem[]);
+    const [MobileList, setMobileList] = useState([] as MobileListItem[]);
+    const [ControlCenterList, setControlCenterList] = useState({} as ControlCenterListItem[]);
 
+    useEffect(() => {
+        // ... your initial api call inside here
+    
+      setControlCenterList(...ControlCenterConfigData); 
+    },
+    []
+    ); 
     return (
       <>
        <div className="page_header">

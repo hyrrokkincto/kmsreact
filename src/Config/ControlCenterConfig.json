@@ -1,0 +1,34 @@
+{
+
+    "general": [{
+
+                   "code": "photoProtect",
+                   "name": "Photo protect and backup",
+                   "menu": "general",
+                   "order": 1
+                     }],
+
+    "desktop": [{
+
+                   "code": "photoProtect",
+                   "name": "Photo protect and backup",
+                   "menu": "general",
+                   "order": 1
+                     }],
+
+    "mobile": [{
+
+                   "code": "docProtect",
+                   "name": "Document protect and backup",
+                   "menu": "mobile",
+                   "order": 1
+                   },
+                {
+
+                   "code": "docProtect",
+                   "name": "Document protect and backup",
+                   "menu": "mobile",
+                   "order": 2
+                }]
+
+}
