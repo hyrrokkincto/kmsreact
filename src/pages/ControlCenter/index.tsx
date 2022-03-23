@@ -58,10 +58,10 @@ const ControlCenter = () => {
             <div className="custom-container">
                 <div className='control-center'>
                     <Row>
-                        <Col md={4}>
+                        <Col md={2}>
                             <h4>General</h4>
                         </Col>
-                        <Col md={6}>
+                        <Col md={8}>
                             <div className='card'>
                                 {
                                     !!GeneralList && GeneralList.length ? (
@@ -78,9 +78,9 @@ const ControlCenter = () => {
                                                             id={row.code}
                                                             onClick={() => onSwitchAction(row.code)}
                                                         /> */}
-                                                        <div className="custom-checkbox">
-                                                            <input type="checkbox" id="custom-checkbox" className="d-none" />
-                                                        <label htmlFor="custom-checkbox" className="toggle"><span></span></label>
+                                                        <div className="custom-check">
+                                                            <input type="checkbox" id={row.code} className="d-none custom-checkbox" defaultChecked={row.value ? true : false} />
+                                                        <label htmlFor={row.code}  onClick={() => onSwitchAction(row.code)}  className="toggle"><span></span></label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -94,10 +94,10 @@ const ControlCenter = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={4}>
+                        <Col md={2}>
                             <h4>Desktop</h4>
                         </Col>
-                        <Col md={6}>
+                        <Col md={8}>
                             <div className='card'>
                                 {
                                     !!DesktopList && DesktopList.length ? (
@@ -108,11 +108,10 @@ const ControlCenter = () => {
                                                         {row.name}
                                                     </div>
                                                     <div className='col-md-4'>
-                                                        <Form.Check type="switch" className='custom-switch-green'
-                                                            defaultChecked={row.value ? true : false}
-                                                            id={row.code}
-                                                            onClick={() => onSwitchAction(row.code)}
-                                                        />
+                                                    <div className="custom-check">
+                                                            <input type="checkbox" id={row.code} className="d-none custom-checkbox" defaultChecked={row.value ? true : false} />
+                                                        <label htmlFor={row.code}  onClick={() => onSwitchAction(row.code)}  className="toggle"><span></span></label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </>
@@ -125,10 +124,10 @@ const ControlCenter = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={4}>
+                        <Col md={2}>
                             <h4>Mobile</h4>
                         </Col>
-                        <Col md={6}>
+                        <Col md={8}>
                             <div className='card'>
                                 {
                                     !!MobileList && MobileList.length ? (
@@ -139,13 +138,12 @@ const ControlCenter = () => {
                                                         {row.name}
                                                     </div>
                                                     <div className='col-md-4'>
-                                                        <Form.Check type="switch" className='custom-switch-green'
-                                                            defaultChecked={row.value ? true : false}
-                                                            id={row.code}
-                                                            onClick={() => onSwitchAction(row.code)}
-                                                        />
-                                                    </div>
-                                                </div>
+                                                        <div className="custom-check">
+                                                            <input type="checkbox" id={row.code} className="d-none custom-checkbox" defaultChecked={row.value ? true : false} />
+                                                        <label htmlFor={row.code}  onClick={() => onSwitchAction(row.code)}  className="toggle"><span></span></label>
+                                                        </div>
+                                                    </div> 
+                                                </div> 
                                             </>
                                         })
                                     ) : <>

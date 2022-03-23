@@ -11,7 +11,7 @@
 
    "desktop": [{
 
-      "code": "photoProtect",
+      "code": "photoProtect1",
       "name": "Photo protect and backup",
       "menu": "general",
       "order": 1,
@@ -28,7 +28,7 @@
       },
       {
 
-         "code": "docProtect",
+         "code": "docProtect1",
          "name": "Document protect and backup",
          "menu": "mobile",
          "order": 2,
