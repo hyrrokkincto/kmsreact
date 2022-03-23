@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Form, Row } from 'react-bootstrap'
-import ControlCenterConfigData from "../../Config/ControlCenterConfig.json"
+import ControlCenterConfigData from "../../Config/ControlCenterConfig.json" 
 export interface ControlCenterListItem {
     general: GeneralListItem[];
     desktop: DesktopListItem[];
@@ -29,9 +29,9 @@ export interface MobileListItem {
     menu: string;
     order: number;
     value: number;
-}
-
+} 
 const ControlCenter = () => {
+   
     const [GeneralList, setGeneralList] = useState([] as GeneralListItem[]);
     const [DesktopList, setDesktopList] = useState([] as DesktopListItem[]);
     const [MobileList, setMobileList] = useState([] as MobileListItem[]);
@@ -49,7 +49,7 @@ const ControlCenter = () => {
     const onSwitchAction = (code) => {
         alert(code);
         //Call PostAPI (to save a setting change):
-    };
+    }; 
     return (
         <>
             <div className="page_header">
@@ -67,16 +67,21 @@ const ControlCenter = () => {
                                     !!GeneralList && GeneralList.length ? (
                                         GeneralList.map((row, index) => {
                                             return <>
-                                                <div className='row row-grid py-4 align-items-center'>
+                                                <div className='row row-grid py-2 align-items-center'>
                                                     <div className='col-md-8'>
                                                         {row.name}
-                                                    </div>
+                                                    </div> 
+                                                    
                                                     <div className='col-md-4'>
-                                                        <Form.Check type="switch" className='custom-switch-green'
+                                                        {/* <Form.Check type="switch" className='custom-switch-green'
                                                             defaultChecked={row.value ? true : false}
                                                             id={row.code}
                                                             onClick={() => onSwitchAction(row.code)}
-                                                        />
+                                                        /> */}
+                                                        <div className="custom-checkbox">
+                                                            <input type="checkbox" id="custom-checkbox" className="d-none" />
+                                                        <label htmlFor="custom-checkbox" className="toggle"><span></span></label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </>
@@ -98,7 +103,7 @@ const ControlCenter = () => {
                                     !!DesktopList && DesktopList.length ? (
                                         DesktopList.map((row, index) => {
                                             return <>
-                                                <div className='row row-grid py-4 align-items-center'>
+                                                <div className='row row-grid py-2 align-items-center'>
                                                     <div className='col-md-8'>
                                                         {row.name}
                                                     </div>
@@ -129,7 +134,7 @@ const ControlCenter = () => {
                                     !!MobileList && MobileList.length ? (
                                         MobileList.map((row, index) => {
                                             return <>
-                                                <div className='row row-grid py-4 align-items-center'>
+                                                <div className='row row-grid py-2 align-items-center'>
                                                     <div className='col-md-8'>
                                                         {row.name}
                                                     </div>
