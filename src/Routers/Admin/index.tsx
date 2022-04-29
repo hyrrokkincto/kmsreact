@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { Redirect, withRouter } from "react-router";
 import Header from "../../Components/Header";
-import Sidebar from "../../Components/Sidebar";   
+import Sidebar from "../../Components/Sidebar";    
 const RegisterOrganization = React.lazy(() => import("../../pages/RegisterOrganization"));
 const Analytics = React.lazy(() => import("../../pages/Analytics"));
 const RolesComponent = React.lazy(() => import("../../pages/RolesComponent"));
@@ -14,6 +14,7 @@ const Organizations = React.lazy(() => import("../../pages/Organizations"));
 const Invoice = React.lazy(() => import("../../pages/Invoice"));
 const SalesAnalytics = React.lazy(() => import("../../pages/SalesAnalytics"));
 const ControlCenter = React.lazy(() => import("../../pages/ControlCenter"));  
+const DataRisk = React.lazy(() => import("../../pages/DataRisk"));  
 const AdminRoute = () => {
   return (
     <>
@@ -40,6 +41,7 @@ const AdminRoute = () => {
             <Route exact path="/admin/invoice" component={Invoice} />
             <Route exact path="/admin/sales-analytics" component={SalesAnalytics} />
             <Route exact path="/admin/control-center" component={ControlCenter} /> 
+            <Route exact path="/admin/data-risk" component={DataRisk} /> 
           </Switch>
         </div>
       </div>

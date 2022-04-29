@@ -90,6 +90,13 @@
       "hasChild": false,
       "hypherLink": "/admin/control-center",
       "icon": "sliders"
+    },
+    {
+      "id": 13,
+      "linkText": "DataRisk",
+      "hasChild": false,
+      "hypherLink": "/admin/data-risk",
+      "icon": "sliders"
     }
   ]
 }
