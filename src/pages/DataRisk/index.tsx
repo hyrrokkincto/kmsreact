@@ -33,9 +33,9 @@ const DataRisk = () =>{
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Action 2</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Action 3</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                         <Button href="#" variant="dark" className='border-radius-25 px-4 mx-2 h-45 line-height-32 text-white'><Feather.Plus /> Add</Button>
