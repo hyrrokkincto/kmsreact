@@ -2,15 +2,32 @@ import React, { PureComponent } from 'react';
 import { ScatterChart,
   Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer  } from 'recharts';
 
-const data = [
-  { name: '14 April', y: 3 },
-  { name: '15 April', y: 1 },
-  { name: '16 April', y: 4 },
-  { name: '17 April', y: 3 },
-  { name: '18 April', y: 6 },
-  { name: '19 April', y: 3 }
-];
-
+  const data = [
+    { name: '14 April', y: 1 },
+    { name: '14 April', y: 1.2 },
+    { name: '14 April', y: 1.3 },
+    { name: '17 April', y: 1 },
+    { name: '18 April', y: 1.1 },
+    { name: '19 April', y: 1.2 },
+    { name: '20 April', y: 1.3 },
+    { name: '21 April', y: 1.1 },
+    { name: '22 April', y: 1.1 },
+    { name: '23 April', y: 2 },
+    { name: '24 April', y: 1.1 },
+    { name: '2 May', y: 1.2 },
+    { name: '4 May', y: 1 },
+    { name: '5 May', y: 1.1 },
+    { name: '6 May', y: 1.2 },
+    { name: '7 May', y: 1.2 },
+    { name: '8 May', y: 1 },
+    { name: '9 May', y: 2 },
+    { name: '10 May', y: 1.1 },
+    { name: '21 May', y: 1.2 },
+    { name: '22 May', y: 1.4 },
+    { name: '23 May', y: 1.1 },
+    { name: '24 May', y: 2.1 },
+    { name: '25 May', y: 1.1 }
+  ];
 
 const TotalUnProtectedHours = () =>{  
     return (
@@ -27,9 +44,9 @@ const TotalUnProtectedHours = () =>{
       }}
     >
       <CartesianGrid vertical={false} horizontal={false} />
-      <XAxis dataKey="name" name="stature" />
-      <YAxis dataKey="y" name="weight" unit="Hours" />
-      <ZAxis type="number" range={[0]} />
+      <XAxis dataKey="name" />
+      <YAxis dataKey="y" ticks={[0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} unit=" Hours" />
+      <ZAxis type="number" interval={2} range={[0]} />
       <Tooltip cursor={{ strokeDasharray: "10 10" }} />
       <Legend />
       <Scatter 

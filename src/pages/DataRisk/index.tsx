@@ -42,8 +42,7 @@ const DataRisk = () =>{
                  </Col>
              </Row> 
         </div>
-        <div className='app-main-inner'> 
-            <Container>
+        <div className='app-main-inner'>  
                <div className="custom-search mb-5">
                    <Row>
                        <Col md={8}>
@@ -109,8 +108,7 @@ const DataRisk = () =>{
                     </Card.Body>
                 </Card>
                 </Col> 
-            </Row>
-            </Container>
+            </Row> 
         </div> 
             </>
     )
