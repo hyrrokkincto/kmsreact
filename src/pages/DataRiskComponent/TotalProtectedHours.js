@@ -6,6 +6,7 @@ const data = [
   { name: '14 April', y: 1 },
   { name: '14 April', y: 1.2 },
   { name: '14 April', y: 1.3 },
+  { name: '15 April', y: 1.3 },
   { name: '17 April', y: 1 },
   { name: '18 April', y: 1.1 },
   { name: '19 April', y: 1.2 },
@@ -46,7 +47,7 @@ const TotalProtectedHours = () =>{
     >
       <CartesianGrid vertical={false} horizontal={false} />
       <XAxis dataKey="name" />
-      <YAxis dataKey="y" ticks={[0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}  unit=" Hours" />
+      <YAxis dataKey="y" ticks={[0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} domain={[1, 10]} unit=" Hours" />
       <ZAxis type="number" interval={2}  range={[0]} />
       <Tooltip cursor={{ strokeDasharray: "3 3" }} />
       <Legend />

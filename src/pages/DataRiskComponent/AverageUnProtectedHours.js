@@ -45,7 +45,7 @@ const AverageUnProtectedHours = () =>{
   >
     <CartesianGrid vertical={false} horizontal={false} />
     <XAxis dataKey="name" />
-    <YAxis dataKey="y" ticks={[0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} unit=" Hours" />
+    <YAxis dataKey="y" ticks={[0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} domain={[1, 10]} unit=" Hours" />
     <ZAxis type="number" interval={2} range={[0]} />
     <Tooltip cursor={{ strokeDasharray: "10 10" }} />
     <Legend />

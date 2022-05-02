@@ -75,8 +75,8 @@ const DataRisk = () =>{
                    </Row> 
                  </div> 
 
-        <Row xs={1} md={2} className="g-4"> 
-                <Col>
+        <Row xs={12} md={2} className="g-4"> 
+                <Col xs={12} md={12} lg={6}>
                 <Card className="card-analysis"> 
                     <Card.Body> 
                         <Card.Title className='orange'>Total Protected Hours</Card.Title>
@@ -84,7 +84,7 @@ const DataRisk = () =>{
                     </Card.Body>
                 </Card>
                 </Col> 
-                <Col>
+                <Col xs={12} md={12} lg={6}>
                 <Card className="card-analysis"> 
                     <Card.Body>
                     <Card.Title className='blue'>Average Protected Hours</Card.Title>
@@ -92,7 +92,7 @@ const DataRisk = () =>{
                     </Card.Body>
                 </Card>
                 </Col> 
-                <Col>
+                <Col xs={12} md={12} lg={6}>
                 <Card className="card-analysis"> 
                     <Card.Body>
                     <Card.Title className='red'>Total Unprotected Hours</Card.Title>
@@ -100,7 +100,7 @@ const DataRisk = () =>{
                     </Card.Body>
                 </Card>
                 </Col> 
-                <Col>
+                <Col xs={12} md={12} lg={6}>
                 <Card className="card-analysis"> 
                     <Card.Body>
                     <Card.Title className='green'>Average unprotected Hours</Card.Title>
